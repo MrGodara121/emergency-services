@@ -1,4 +1,3 @@
-// Emergency Services Website - Main JavaScript
 document.addEventListener('DOMContentLoaded', function() {
   initMobileMenu();
   initAccordion();
@@ -10,7 +9,6 @@ document.addEventListener('DOMContentLoaded', function() {
   initLeadForm();
 });
 
-// Mobile menu toggle
 function initMobileMenu() {
   const menuToggle = document.getElementById('mobile-menu-toggle');
   const sidebar = document.getElementById('mobile-sidebar');
@@ -35,7 +33,6 @@ function initMobileMenu() {
   }
 }
 
-// Accordion for mobile categories
 function initAccordion() {
   const accordionToggle = document.querySelector('.accordion-toggle');
   if (accordionToggle) {
@@ -47,7 +44,6 @@ function initAccordion() {
   }
 }
 
-// Category grid on home page
 function initCategoryGrid() {
   const grid = document.getElementById('category-grid');
   if (!grid) return;
@@ -80,7 +76,6 @@ function initCategoryGrid() {
   grid.innerHTML = html;
 }
 
-// Popular ZIPs
 function initPopularZips() {
   const container = document.getElementById('popular-zips');
   if (!container) return;
@@ -104,7 +99,6 @@ function initPopularZips() {
   container.innerHTML = html;
 }
 
-// Testimonials
 function initTestimonials() {
   const container = document.getElementById('testimonials');
   if (!container) return;
@@ -130,7 +124,6 @@ function initTestimonials() {
   container.innerHTML = html;
 }
 
-// ZIP search form
 function initSearchForm() {
   const form = document.querySelector('.zip-search');
   if (!form) return;
@@ -146,7 +139,6 @@ function initSearchForm() {
   });
 }
 
-// Call button validation – must select category first
 function initCallButton() {
   const callBtn = document.getElementById('call-button');
   const categorySelect = document.getElementById('category-select');
@@ -172,7 +164,6 @@ function initCallButton() {
   }
 }
 
-// Lead form handling
 function initLeadForm() {
   const leadForm = document.getElementById('lead-form');
   if (!leadForm) return;
@@ -189,7 +180,6 @@ function initLeadForm() {
       pageUrl: window.location.href
     };
     
-    // Send to Apps Script web app
     fetch('https://script.google.com/macros/s/AKfycbyA37AFoEsHNHXAZkkHE-rdLM1xNcCSXpO7D0FL5_BsL0eQypuH031jmea_SklypxVN/exec', {
       method: 'POST',
       mode: 'no-cors',
