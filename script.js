@@ -190,7 +190,7 @@ function initLeadForm() {
     };
     
     // Send to Apps Script web app
-    fetch('YOUR_SCRIPT_URL', {
+    fetch('https://script.google.com/macros/s/AKfycbyA37AFoEsHNHXAZkkHE-rdLM1xNcCSXpO7D0FL5_BsL0eQypuH031jmea_SklypxVN/exec', {
       method: 'POST',
       mode: 'no-cors',
       headers: { 'Content-Type': 'application/json' },
