@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emergency Services USA – 24/7 Local Help</title>
+  <meta name="description" content="Find 24/7 emergency services in your area. Water damage, mold, locksmith, plumbing, HVAC, roofing, pest control, solar, junk removal, tree services. Call now!">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <div class="container header-container">
+      <div class="logo">
+        <i class="fas fa-truck-medical"></i>
+        <h2>Emergency<span>Services</span></h2>
+      </div>
+      <nav class="desktop-nav">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li class="dropdown">
+            <a href="#">Categories <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="/category/water-damage.html"><i class="fas fa-water"></i> Water Damage</a></li>
+              <li><a href="/category/mold-remediation.html"><i class="fas fa-leaf"></i> Mold Remediation</a></li>
+              <li><a href="/category/locksmith.html"><i class="fas fa-lock"></i> Emergency Locksmith</a></li>
+              <li><a href="/category/plumbing.html"><i class="fas fa-wrench"></i> Plumbing</a></li>
+              <li><a href="/category/hvac.html"><i class="fas fa-wind"></i> HVAC</a></li>
+              <li><a href="/category/roofing.html"><i class="fas fa-home"></i> Roofing</a></li>
+              <li><a href="/category/pest-control.html"><i class="fas fa-bug"></i> Pest Control</a></li>
+              <li><a href="/category/solar.html"><i class="fas fa-sun"></i> Solar</a></li>
+              <li><a href="/category/junk-removal.html"><i class="fas fa-trash"></i> Junk Removal</a></li>
+              <li><a href="/category/tree-services.html"><i class="fas fa-tree"></i> Tree Services</a></li>
+            </ul>
+          </li>
+          <li><a href="/blog.html"><i class="fas fa-blog"></i> Blog</a></li>
+          <li><a href="/insurance.html"><i class="fas fa-shield-alt"></i> Insurance Info</a></li>
+          <li><a href="/calculators.html"><i class="fas fa-calculator"></i> Calculators</a></li>
+          <li><a href="/contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+      </nav>
+      <div class="emergency-call desktop-call">
+        <a href="tel:+18555551234" class="call-button"><i class="fas fa-phone-alt"></i> (855) 555-1234</a>
+      </div>
+      <div class="mobile-menu-toggle" id="mobile-menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+    <!-- Mobile Sidebar -->
+    <div class="mobile-sidebar" id="mobile-sidebar">
+      <div class="sidebar-header">
+        <i class="fas fa-truck-medical"></i>
+        <h2>Emergency<span>Services</span></h2>
+        <button class="close-sidebar" id="close-sidebar"><i class="fas fa-times"></i></button>
+      </div>
+      <ul class="sidebar-nav">
+        <li><a href="/"><i class="fas fa-home"></i> Home</a></li>
+        <li class="accordion">
+          <a href="#" class="accordion-toggle"><i class="fas fa-list"></i> Categories <i class="fas fa-chevron-down"></i></a>
+          <ul class="accordion-menu">
+            <li><a href="/category/water-damage.html"><i class="fas fa-water"></i> Water Damage</a></li>
+            <li><a href="/category/mold-remediation.html"><i class="fas fa-leaf"></i> Mold Remediation</a></li>
+            <li><a href="/category/locksmith.html"><i class="fas fa-lock"></i> Emergency Locksmith</a></li>
+            <li><a href="/category/plumbing.html"><i class="fas fa-wrench"></i> Plumbing</a></li>
+            <li><a href="/category/hvac.html"><i class="fas fa-wind"></i> HVAC</a></li>
+            <li><a href="/category/roofing.html"><i class="fas fa-home"></i> Roofing</a></li>
+            <li><a href="/category/pest-control.html"><i class="fas fa-bug"></i> Pest Control</a></li>
+            <li><a href="/category/solar.html"><i class="fas fa-sun"></i> Solar</a></li>
+            <li><a href="/category/junk-removal.html"><i class="fas fa-trash"></i> Junk Removal</a></li>
+            <li><a href="/category/tree-services.html"><i class="fas fa-tree"></i> Tree Services</a></li>
+          </ul>
+        </li>
+        <li><a href="/blog.html"><i class="fas fa-blog"></i> Blog</a></li>
+        <li><a href="/insurance.html"><i class="fas fa-shield-alt"></i> Insurance Info</a></li>
+        <li><a href="/calculators.html"><i class="fas fa-calculator"></i> Calculators</a></li>
+        <li><a href="/contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+      </ul>
+      <div class="sidebar-call">
+        <a href="tel:+18555551234" class="call-button"><i class="fas fa-phone-alt"></i> Call Now (855) 555-1234</a>
+      </div>
+    </div>
+    <div class="overlay" id="overlay"></div>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Emergency Services USA</h1>
+        <p class="subhead">Fast, reliable help in your area – 24/7</p>
+        <div class="search-box">
+          <h3><i class="fas fa-map-marker-alt"></i> Find Emergency Services Near You</h3>
+          <form action="/search" method="get" class="zip-search">
+            <input type="text" name="zip" placeholder="Enter ZIP code (e.g., 90210)" pattern="[0-9]{5}" maxlength="5" required>
+            <button type="submit"><i class="fas fa-search"></i> Search</button>
+          </form>
+          <p class="example">Example: <a href="/zip/90210.html">90210 - Beverly Hills</a></p>
+        </div>
+        <div class="trust-badges">
+          <span class="badge"><i class="fas fa-check-circle"></i> BBB Accredited</span>
+          <span class="badge"><i class="fas fa-clock"></i> 24/7 Service</span>
+          <span class="badge"><i class="fas fa-id-card"></i> Licensed & Insured</span>
+          <span class="badge"><i class="fas fa-dollar-sign"></i> Free Estimates</span>
+        </div>
+      </div>
+    </section>
+    <section class="featured-categories">
+      <div class="container">
+        <h2><i class="fas fa-tools"></i> Our Emergency Services</h2>
+        <div class="category-grid" id="category-grid"></div>
+      </div>
+    </section>
+    <section class="how-it-works">
+      <div class="container">
+        <h2><i class="fas fa-question-circle"></i> How It Works</h2>
+        <div class="steps">
+          <div class="step"><div class="step-number">1</div><i class="fas fa-map-pin step-icon"></i><h3>Enter ZIP Code</h3><p>Find local emergency services in your area</p></div>
+          <div class="step"><div class="step-number">2</div><i class="fas fa-list-ul step-icon"></i><h3>Select Category</h3><p>Choose the service you need immediately</p></div>
+          <div class="step"><div class="step-number">3</div><i class="fas fa-phone-alt step-icon"></i><h3>Call Now</h3><p>Connect with local professionals 24/7</p></div>
+        </div>
+      </div>
+    </section>
+    <section class="popular-zips">
+      <div class="container">
+        <h2><i class="fas fa-star"></i> Popular Service Areas</h2>
+        <div class="zip-grid" id="popular-zips"></div>
+      </div>
+    </section>
+    <section class="testimonials">
+      <div class="container">
+        <h2><i class="fas fa-comments"></i> What Our Customers Say</h2>
+        <div class="testimonial-grid" id="testimonials"></div>
+      </div>
+    </section>
+    <section class="cta">
+      <div class="container">
+        <h2>Need Emergency Help Right Now?</h2>
+        <p>Don't wait – call our 24/7 emergency hotline</p>
+        <a href="tel:+18555551234" class="cta-button"><i class="fas fa-phone-alt"></i> Call (855) 555-1234 NOW</a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3><i class="fas fa-truck-medical"></i> Emergency Services USA</h3>
+          <p>Your trusted source for 24/7 emergency services across the United States.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3><i class="fas fa-link"></i> Quick Links</h3>
+          <ul>
+            <li><a href="/"><i class="fas fa-chevron-right"></i> Home</a></li>
+            <li><a href="/categories.html"><i class="fas fa-chevron-right"></i> All Categories</a></li>
+            <li><a href="/blog.html"><i class="fas fa-chevron-right"></i> Blog</a></li>
+            <li><a href="/insurance.html"><i class="fas fa-chevron-right"></i> Insurance Info</a></li>
+            <li><a href="/calculators.html"><i class="fas fa-chevron-right"></i> Calculators</a></li>
+            <li><a href="/about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+            <li><a href="/contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3><i class="fas fa-tags"></i> Categories</h3>
+          <ul id="footer-categories">
+            <li><a href="/category/water-damage.html"><i class="fas fa-water"></i> Water Damage</a></li>
+            <li><a href="/category/mold-remediation.html"><i class="fas fa-leaf"></i> Mold Remediation</a></li>
+            <li><a href="/category/locksmith.html"><i class="fas fa-lock"></i> Emergency Locksmith</a></li>
+            <li><a href="/category/plumbing.html"><i class="fas fa-wrench"></i> Plumbing</a></li>
+            <li><a href="/category/hvac.html"><i class="fas fa-wind"></i> HVAC</a></li>
+            <li><a href="/category/roofing.html"><i class="fas fa-home"></i> Roofing</a></li>
+            <li><a href="/category/pest-control.html"><i class="fas fa-bug"></i> Pest Control</a></li>
+            <li><a href="/category/solar.html"><i class="fas fa-sun"></i> Solar</a></li>
+            <li><a href="/category/junk-removal.html"><i class="fas fa-trash"></i> Junk Removal</a></li>
+            <li><a href="/category/tree-services.html"><i class="fas fa-tree"></i> Tree Services</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3><i class="fas fa-map-marker-alt"></i> Service Areas</h3>
+          <ul id="footer-zips">
+            <li><a href="/zip/90210.html"><i class="fas fa-chevron-right"></i> 90210 - Beverly Hills</a></li>
+            <li><a href="/zip/90211.html"><i class="fas fa-chevron-right"></i> 90211 - Beverly Hills</a></li>
+            <li><a href="/zip/90212.html"><i class="fas fa-chevron-right"></i> 90212 - Beverly Hills</a></li>
+            <li><a href="/zip/90001.html"><i class="fas fa-chevron-right"></i> 90001 - Los Angeles</a></li>
+            <li><a href="/zip/90002.html"><i class="fas fa-chevron-right"></i> 90002 - Los Angeles</a></li>
+          </ul>
+          <a href="/sitemap.xml" class="view-all"><i class="fas fa-arrow-right"></i> View All Areas</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Emergency Services USA. All rights reserved.</p>
+        <p><a href="/privacy.html"><i class="fas fa-lock"></i> Privacy Policy</a> | <a href="/terms.html"><i class="fas fa-file-contract"></i> Terms of Service</a> | <a href="/sitemap.xml"><i class="fas fa-sitemap"></i> Sitemap</a></p>
+      </div>
+    </div>
+  </footer>
+  <script src="/script.js"></script>
+</body>
+</html>
