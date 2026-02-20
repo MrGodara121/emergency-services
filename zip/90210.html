@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Miami Emergency Services</title>
-  <meta name="description" content="Find emergency services in Miami">
+  <title>Beverly Hills Emergency Services</title>
+  <meta name="description" content="Find emergency services in Beverly Hills">
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -49,13 +49,13 @@
   
   <main>
     <div class="container">
-      <h1>Emergency Services in Miami, FL</h1>
+      <h1>Emergency Services in Beverly Hills, CA</h1>
       
       <div class="call-block">
         <h3>Select Service:</h3>
         <select id="category-select" required>
           <option value="">-- Choose a category --</option>
-          <option value="+1-305-555-1234">Water Damage</option><option value="+1-305-555-5678">Mold Remediation</option>
+          <option value="+1-310-555-1234">Water Damage</option><option value="+1-310-555-5678">Mold Remediation</option><option value="+1-310-555-9012">Emergency Locksmith</option><option value="+1-310-555-3456">Plumbing</option><option value="+1-310-555-7890">HVAC</option>
         </select>
         
         <a id="call-button" href="#" class="call-button disabled">
@@ -66,22 +66,26 @@
       
       <div class="info-block">
         <h3>Neighborhoods Served:</h3>
-        <p>The Hammocks, Kendall</p>
+        <p>Trousdale, Beverly Crest</p>
       </div>
       
       
       <div class="info-block">
         <h3>Nearby Landmarks:</h3>
-        <p>Zoo Miami</p>
+        <p>Rodeo Drive</p>
       </div>
       
       
       <div class="info-block">
-        <h3>About Miami Team</h3>
+        <h3>About Beverly Hills Team</h3>
         <p>Local emergency service experts</p>
       </div>
       
       
+      <div class="info-block">
+        <h3>Related Services</h3>
+        <ul><li><a href="/category/water-damage.html">water damage</a></li><li><a href="/category/mold.html">mold</a></li><li><a href="/category/plumbing.html">plumbing</a></li></ul>
+      </div>
       
       
       
@@ -92,8 +96,8 @@
         <form id="lead-form">
           <input type="text" name="name" placeholder="Your Name" required>
           <input type="tel" name="phone" placeholder="Phone Number" required>
-          <input type="hidden" name="zip" value="33186">
-          <input type="hidden" name="city" value="Miami">
+          <input type="hidden" name="zip" value="90210">
+          <input type="hidden" name="city" value="Beverly Hills">
           <input type="hidden" name="category" id="lead-category" value="">
           <button type="submit">Get Free Quote</button>
         </form>

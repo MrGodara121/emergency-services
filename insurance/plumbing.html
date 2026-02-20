@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Miami Emergency Services</title>
-  <meta name="description" content="Find emergency services in Miami">
+  <title>Emergency Plumbing Insurance Guide | Emergency Services USA</title>
+  <meta name="description" content="Complete insurance guide for Emergency Plumbing. Learn what's covered, exclusions, and how to file claims.">
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
 </head>
 <body>
   <header>
@@ -47,55 +48,49 @@
     </div>
   </header>
   
-  <main>
-    <div class="container">
-      <h1>Emergency Services in Miami, FL</h1>
+  <main class="container">
+    <h1>Emergency Plumbing Insurance Guide</h1>
+    
+    <div class="insurance-content">
+      <section class="info-block">
+        <h2><i class="fas fa-check-circle" style="color: green;"></i> What's Typically Covered?</h2>
+        <p>Sudden pipe bursts usually covered</p>
+      </section>
       
-      <div class="call-block">
-        <h3>Select Service:</h3>
-        <select id="category-select" required>
-          <option value="">-- Choose a category --</option>
-          <option value="+1-305-555-1234">Water Damage</option><option value="+1-305-555-5678">Mold Remediation</option>
-        </select>
-        
-        <a id="call-button" href="#" class="call-button disabled">
-          <i class="fas fa-phone-alt"></i> Call Now
-        </a>
-      </div>
+      <section class="info-block">
+        <h2><i class="fas fa-times-circle" style="color: red;"></i> Common Exclusions</h2>
+        <p>Gradual leaks, tree root damage, sewer backups (without endorsement), and maintenance issues are excluded.</p>
+        <ul>
+          <li>Gradual damage or wear and tear</li>
+          <li>Maintenance-related issues</li>
+          <li>Flood damage (requires separate flood insurance)</li>
+          <li>Earth movement (earthquake, landslide)</li>
+          <li>Intentional damage</li>
+        </ul>
+      </section>
       
-      
-      <div class="info-block">
-        <h3>Neighborhoods Served:</h3>
-        <p>The Hammocks, Kendall</p>
-      </div>
-      
-      
-      <div class="info-block">
-        <h3>Nearby Landmarks:</h3>
-        <p>Zoo Miami</p>
-      </div>
-      
-      
-      <div class="info-block">
-        <h3>About Miami Team</h3>
-        <p>Local emergency service experts</p>
-      </div>
+      <section class="info-block">
+        <h2><i class="fas fa-file-invoice"></i> How to File a Claim</h2>
+        <ol>
+          <li><strong>Document everything</strong> – Take photos/videos before any cleanup. Make a list of damaged items.</li>
+          <li><strong>Mitigate further damage</strong> – Make temporary repairs to prevent more damage. Keep all receipts.</li>
+          <li><strong>Contact your insurance company</strong> – File your claim immediately. Have your policy number ready.</li>
+          <li><strong>Meet with the adjuster</strong> – Point out all damage. Our team can be present to help explain the scope of work.</li>
+          <li><strong>Get repair estimates</strong> – We work with insurance companies directly and provide detailed estimates.</li>
+        </ol>
+      </section>
       
       
       
-      
-      
-      
-      
-      <div class="info-block">
-        <h3>Request a Callback</h3>
-        <form id="lead-form">
+      <div class="cta-box">
+        <h3>Need Claim Assistance?</h3>
+        <p>We work with all major insurance companies and can help with your claim.</p>
+        <form id="claim-form" onsubmit="return submitClaim(event)">
           <input type="text" name="name" placeholder="Your Name" required>
           <input type="tel" name="phone" placeholder="Phone Number" required>
-          <input type="hidden" name="zip" value="33186">
-          <input type="hidden" name="city" value="Miami">
-          <input type="hidden" name="category" id="lead-category" value="">
-          <button type="submit">Get Free Quote</button>
+          <input type="hidden" name="category" value="Emergency Plumbing">
+          <input type="hidden" name="type" value="insurance-claim">
+          <button type="submit" class="btn">Get Claim Help</button>
         </form>
       </div>
     </div>
@@ -144,27 +139,16 @@
   </footer>
   
   <script>
-    const categorySelect = document.getElementById('category-select');
-    const callButton = document.getElementById('call-button');
-    const leadCategory = document.getElementById('lead-category');
-    
-    categorySelect.addEventListener('change', function() {
-      if (this.value) {
-        callButton.href = 'tel:' + this.value;
-        callButton.classList.remove('disabled');
-        if (leadCategory) leadCategory.value = this.options[this.selectedIndex].text;
-      } else {
-        callButton.href = '#';
-        callButton.classList.add('disabled');
-      }
-    });
-    
-    document.getElementById('lead-form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const formData = new FormData(this);
-      const data = {};
-      formData.forEach((value, key) => data[key] = value);
-      data.pageUrl = window.location.href;
+    function submitClaim(event) {
+      event.preventDefault();
+      const form = event.target;
+      const data = {
+        name: form.name.value,
+        phone: form.phone.value,
+        category: form.category.value,
+        type: form.type.value,
+        pageUrl: window.location.href
+      };
       
       fetch('https://script.google.com/macros/s/AKfycbyA37AFoEsHNHXAZkkHE-rdLM1xNcCSXpO7D0FL5_BsL0eQypuH031jmea_SklypxVN/exec', {
         method: 'POST',
@@ -172,10 +156,15 @@
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)
       }).then(() => {
+        alert('Thank you! A claim specialist will contact you within 1 hour.');
+        form.reset();
+      }).catch(() => {
         alert('Thank you! We will contact you shortly.');
-        this.reset();
+        form.reset();
       });
-    });
+      
+      return false;
+    }
   </script>
 </body>
 </html>

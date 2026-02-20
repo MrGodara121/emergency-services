@@ -1,12 +1,8 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Miami Emergency Services</title>
-  <meta name="description" content="Find emergency services in Miami">
+  <title>Sitemap - Emergency Services USA</title>
   <link rel="stylesheet" href="/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
   <header>
@@ -47,58 +43,18 @@
     </div>
   </header>
   
-  <main>
-    <div class="container">
-      <h1>Emergency Services in Miami, FL</h1>
-      
-      <div class="call-block">
-        <h3>Select Service:</h3>
-        <select id="category-select" required>
-          <option value="">-- Choose a category --</option>
-          <option value="+1-305-555-1234">Water Damage</option><option value="+1-305-555-5678">Mold Remediation</option>
-        </select>
-        
-        <a id="call-button" href="#" class="call-button disabled">
-          <i class="fas fa-phone-alt"></i> Call Now
-        </a>
-      </div>
-      
-      
-      <div class="info-block">
-        <h3>Neighborhoods Served:</h3>
-        <p>The Hammocks, Kendall</p>
-      </div>
-      
-      
-      <div class="info-block">
-        <h3>Nearby Landmarks:</h3>
-        <p>Zoo Miami</p>
-      </div>
-      
-      
-      <div class="info-block">
-        <h3>About Miami Team</h3>
-        <p>Local emergency service experts</p>
-      </div>
-      
-      
-      
-      
-      
-      
-      
-      <div class="info-block">
-        <h3>Request a Callback</h3>
-        <form id="lead-form">
-          <input type="text" name="name" placeholder="Your Name" required>
-          <input type="tel" name="phone" placeholder="Phone Number" required>
-          <input type="hidden" name="zip" value="33186">
-          <input type="hidden" name="city" value="Miami">
-          <input type="hidden" name="category" id="lead-category" value="">
-          <button type="submit">Get Free Quote</button>
-        </form>
-      </div>
-    </div>
+  <main class="container">
+    <h1>Website Sitemap</h1>
+    
+    <h2>Emergency Services</h2>
+    <ul>
+      <li><a href="/category/water-damage.html">Water Damage Restoration</a></li><li><a href="/category/mold-remediation.html">Mold Remediation</a></li><li><a href="/category/locksmith.html">Emergency Locksmith</a></li><li><a href="/category/plumbing.html">Emergency Plumbing</a></li><li><a href="/category/hvac.html">HVAC Services</a></li><li><a href="/category/roofing.html">Roofing Repair</a></li><li><a href="/category/pest-control.html">Pest Control</a></li><li><a href="/category/solar.html">Solar Services</a></li><li><a href="/category/junk-removal.html">Junk Removal</a></li><li><a href="/category/tree-services.html">Tree Services</a></li>
+    </ul>
+    
+    <h2>Service Areas (ZIP Codes)</h2>
+    <ul>
+      <li><a href="/zip/90210.html">Beverly Hills, CA 90210</a></li><li><a href="/zip/33186.html">Miami, FL 33186</a></li>
+    </ul>
   </main>
   
   <footer>
@@ -142,40 +98,5 @@
       </div>
     </div>
   </footer>
-  
-  <script>
-    const categorySelect = document.getElementById('category-select');
-    const callButton = document.getElementById('call-button');
-    const leadCategory = document.getElementById('lead-category');
-    
-    categorySelect.addEventListener('change', function() {
-      if (this.value) {
-        callButton.href = 'tel:' + this.value;
-        callButton.classList.remove('disabled');
-        if (leadCategory) leadCategory.value = this.options[this.selectedIndex].text;
-      } else {
-        callButton.href = '#';
-        callButton.classList.add('disabled');
-      }
-    });
-    
-    document.getElementById('lead-form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const formData = new FormData(this);
-      const data = {};
-      formData.forEach((value, key) => data[key] = value);
-      data.pageUrl = window.location.href;
-      
-      fetch('https://script.google.com/macros/s/AKfycbyA37AFoEsHNHXAZkkHE-rdLM1xNcCSXpO7D0FL5_BsL0eQypuH031jmea_SklypxVN/exec', {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data)
-      }).then(() => {
-        alert('Thank you! We will contact you shortly.');
-        this.reset();
-      });
-    });
-  </script>
 </body>
 </html>

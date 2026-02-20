@@ -1,16 +1,141 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Emergency Roof Repair & Replacement Services</title>
+  <title>Roofing Repair Services - 24/7 Emergency | Emergency Services USA</title>
+  <meta name="description" content="Professional roofing repair services available 24/7. Free estimates. Call now!">
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-  <header>[same header]</header>
-  <main>
-    <h1>Emergency Roof Repair & Replacement</h1>
+  <header>
+    <div class="container header-container">
+      <div class="logo">
+        <i class="fas fa-truck-medical"></i>
+        <div>
+          <h2>Emergency<span style="color: var(--accent);">Services</span></h2>
+          <p>USA • 24/7 • Licensed & Insured</p>
+        </div>
+      </div>
+      
+      <nav class="desktop-nav">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li class="dropdown">
+            <a href="#">Services <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="/category/0.html"><i class="fas undefined"></i> undefined</a></li><li><a href="/category/1.html"><i class="fas undefined"></i> undefined</a></li><li><a href="/category/2.html"><i class="fas undefined"></i> undefined</a></li><li><a href="/category/3.html"><i class="fas undefined"></i> undefined</a></li><li><a href="/category/4.html"><i class="fas undefined"></i> undefined</a></li><li><a href="/category/5.html"><i class="fas undefined"></i> undefined</a></li><li><a href="/category/6.html"><i class="fas undefined"></i> undefined</a></li><li><a href="/category/7.html"><i class="fas undefined"></i> undefined</a></li><li><a href="/category/8.html"><i class="fas undefined"></i> undefined</a></li><li><a href="/category/9.html"><i class="fas undefined"></i> undefined</a></li>
+            </ul>
+          </li>
+          <li><a href="/blog/">Resources</a></li>
+          <li><a href="/calculators/">Calculators</a></li>
+          <li><a href="/insurance/">Insurance</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      
+      <div class="emergency-call desktop-call">
+        <a href="tel:+1-888-555-1234" class="call-button">
+          <i class="fas fa-phone-alt"></i> +1-888-555-1234
+        </a>
+      </div>
+      
+      <div class="mobile-menu-toggle" id="mobile-menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </header>
+  
+  <main class="container">
+    <h1>Roofing Repair Services</h1>
+    
+    <div class="call-block">
+      <a href="tel:+1-800-555-6666" class="call-button">
+        <i class="fas fa-phone-alt"></i> Call +1-800-555-6666
+      </a>
+    </div>
+    
+    <div class="info-block">
+      <h3>Insurance Information</h3>
+      <p>Storm damage typically covered</p>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    <div class="info-block">
+      <h3>Request a Callback</h3>
+      <form id="lead-form">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="tel" name="phone" placeholder="Phone Number" required>
+        <input type="hidden" name="category" value="Roofing Repair">
+        <button type="submit">Get Free Quote</button>
+      </form>
+    </div>
   </main>
-  <footer>[same footer]</footer>
-  <script src="/script.js"></script>
+  
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3><i class="fas fa-truck-medical"></i> Emergency Services USA</h3>
+          <p>Your trusted nationwide network of emergency service professionals.</p>
+          <p><i class="fas fa-phone"></i> +1-888-555-1234</p>
+          <p><i class="fas fa-envelope"></i> help@emergencyservicesusa.com</p>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="/category/0.html">undefined</a></li><li><a href="/category/1.html">undefined</a></li><li><a href="/category/2.html">undefined</a></li><li><a href="/category/3.html">undefined</a></li><li><a href="/category/4.html">undefined</a></li><li><a href="/category/5.html">undefined</a></li><li><a href="/category/6.html">undefined</a></li><li><a href="/category/7.html">undefined</a></li><li><a href="/category/8.html">undefined</a></li><li><a href="/category/9.html">undefined</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="/blog/">Emergency Guides</a></li>
+            <li><a href="/calculators/">Cost Calculators</a></li>
+            <li><a href="/insurance/">Insurance Info</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Legal</h3>
+          <ul>
+            <li><a href="/disclaimer.html">Disclaimers</a></li>
+            <li><a href="/privacy.html">Privacy Policy</a></li>
+            <li><a href="/terms.html">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>© 2025 Emergency Services USA. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  
+  <script>
+    document.getElementById('lead-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const formData = new FormData(this);
+      const data = {};
+      formData.forEach((value, key) => data[key] = value);
+      data.pageUrl = window.location.href;
+      
+      fetch('https://script.google.com/macros/s/AKfycbyA37AFoEsHNHXAZkkHE-rdLM1xNcCSXpO7D0FL5_BsL0eQypuH031jmea_SklypxVN/exec', {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      }).then(() => {
+        alert('Thank you! We will contact you shortly.');
+        this.reset();
+      });
+    });
+  </script>
 </body>
 </html>

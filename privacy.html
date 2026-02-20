@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Miami Emergency Services</title>
-  <meta name="description" content="Find emergency services in Miami">
+  <title>Privacy Policy - Emergency Services USA</title>
+  <meta name="robots" content="noindex, follow">
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -47,58 +47,76 @@
     </div>
   </header>
   
-  <main>
-    <div class="container">
-      <h1>Emergency Services in Miami, FL</h1>
-      
-      <div class="call-block">
-        <h3>Select Service:</h3>
-        <select id="category-select" required>
-          <option value="">-- Choose a category --</option>
-          <option value="+1-305-555-1234">Water Damage</option><option value="+1-305-555-5678">Mold Remediation</option>
-        </select>
-        
-        <a id="call-button" href="#" class="call-button disabled">
-          <i class="fas fa-phone-alt"></i> Call Now
-        </a>
-      </div>
-      
-      
-      <div class="info-block">
-        <h3>Neighborhoods Served:</h3>
-        <p>The Hammocks, Kendall</p>
-      </div>
-      
-      
-      <div class="info-block">
-        <h3>Nearby Landmarks:</h3>
-        <p>Zoo Miami</p>
-      </div>
-      
-      
-      <div class="info-block">
-        <h3>About Miami Team</h3>
-        <p>Local emergency service experts</p>
-      </div>
-      
-      
-      
-      
-      
-      
-      
-      <div class="info-block">
-        <h3>Request a Callback</h3>
-        <form id="lead-form">
-          <input type="text" name="name" placeholder="Your Name" required>
-          <input type="tel" name="phone" placeholder="Phone Number" required>
-          <input type="hidden" name="zip" value="33186">
-          <input type="hidden" name="city" value="Miami">
-          <input type="hidden" name="category" id="lead-category" value="">
-          <button type="submit">Get Free Quote</button>
-        </form>
-      </div>
-    </div>
+  <main class="container legal-page">
+    <h1>Privacy Policy</h1>
+    <p class="last-updated">Last updated: February 20, 2026</p>
+    
+    <section class="policy-section">
+      <h2>Information We Collect</h2>
+      <p>We collect information you provide when you:</p>
+      <ul>
+        <li>Request a quote or callback through our forms</li>
+        <li>Use our cost calculators</li>
+        <li>Submit questions or comments via email or contact forms</li>
+        <li>Sign up for newsletters or updates</li>
+        <li>Call the phone numbers listed on our site</li>
+      </ul>
+      <p>This information may include your name, phone number, email address, ZIP code, and details about your service needs.</p>
+    </section>
+    
+    <section class="policy-section">
+      <h2>How We Use Your Information</h2>
+      <ul>
+        <li>To connect you with appropriate service providers in your area</li>
+        <li>To improve our website, services, and user experience</li>
+        <li>To communicate with you about your requests</li>
+        <li>For affiliate tracking and commission purposes</li>
+        <li>To analyze trends and usage of our site</li>
+      </ul>
+    </section>
+    
+    <section class="policy-section">
+      <h2>Information Sharing</h2>
+      <p>We share your information with:</p>
+      <ul>
+        <li><strong>Service Providers:</strong> When you request a quote or callback, we share your information with service providers in your area who can help with your needs.</li>
+        <li><strong>Affiliate Partners:</strong> For tracking commissions when you purchase through affiliate links.</li>
+        <li><strong>Third-Party Service Providers:</strong> Companies that help us operate our website (analytics, hosting, email services).</li>
+        <li><strong>Legal Requirements:</strong> When required by law or to protect our rights.</li>
+      </ul>
+      <p>We do not sell your personal information to third parties.</p>
+    </section>
+    
+    <section class="policy-section">
+      <h2>Cookies and Tracking</h2>
+      <p>We use cookies and similar technologies to:</p>
+      <ul>
+        <li>Track affiliate referrals and commissions</li>
+        <li>Analyze site usage and improve user experience</li>
+        <li>Remember your preferences</li>
+        <li>Serve relevant content</li>
+      </ul>
+      <p>You can control cookies through your browser settings.</p>
+    </section>
+    
+    <section class="policy-section">
+      <h2>Your Rights</h2>
+      <p>Depending on your location, you may have certain rights regarding your personal information, including:</p>
+      <ul>
+        <li>The right to access your personal information</li>
+        <li>The right to correct inaccurate information</li>
+        <li>The right to delete your information</li>
+        <li>The right to opt out of certain data processing</li>
+      </ul>
+      <p>To exercise these rights, please contact us using the information below.</p>
+    </section>
+    
+    <section class="policy-section">
+      <h2>Contact Us</h2>
+      <p>If you have questions about this Privacy Policy or our data practices, please contact us at:</p>
+      <p>Email: help@emergencyservicesusa.com<br>
+      Phone: +1-888-555-1234</p>
+    </section>
   </main>
   
   <footer>
@@ -142,40 +160,5 @@
       </div>
     </div>
   </footer>
-  
-  <script>
-    const categorySelect = document.getElementById('category-select');
-    const callButton = document.getElementById('call-button');
-    const leadCategory = document.getElementById('lead-category');
-    
-    categorySelect.addEventListener('change', function() {
-      if (this.value) {
-        callButton.href = 'tel:' + this.value;
-        callButton.classList.remove('disabled');
-        if (leadCategory) leadCategory.value = this.options[this.selectedIndex].text;
-      } else {
-        callButton.href = '#';
-        callButton.classList.add('disabled');
-      }
-    });
-    
-    document.getElementById('lead-form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const formData = new FormData(this);
-      const data = {};
-      formData.forEach((value, key) => data[key] = value);
-      data.pageUrl = window.location.href;
-      
-      fetch('https://script.google.com/macros/s/AKfycbyA37AFoEsHNHXAZkkHE-rdLM1xNcCSXpO7D0FL5_BsL0eQypuH031jmea_SklypxVN/exec', {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data)
-      }).then(() => {
-        alert('Thank you! We will contact you shortly.');
-        this.reset();
-      });
-    });
-  </script>
 </body>
 </html>

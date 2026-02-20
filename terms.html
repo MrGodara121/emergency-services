@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Miami Emergency Services</title>
-  <meta name="description" content="Find emergency services in Miami">
+  <title>Terms of Service - Emergency Services USA</title>
+  <meta name="robots" content="noindex, follow">
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -47,58 +47,49 @@
     </div>
   </header>
   
-  <main>
-    <div class="container">
-      <h1>Emergency Services in Miami, FL</h1>
-      
-      <div class="call-block">
-        <h3>Select Service:</h3>
-        <select id="category-select" required>
-          <option value="">-- Choose a category --</option>
-          <option value="+1-305-555-1234">Water Damage</option><option value="+1-305-555-5678">Mold Remediation</option>
-        </select>
-        
-        <a id="call-button" href="#" class="call-button disabled">
-          <i class="fas fa-phone-alt"></i> Call Now
-        </a>
-      </div>
-      
-      
-      <div class="info-block">
-        <h3>Neighborhoods Served:</h3>
-        <p>The Hammocks, Kendall</p>
-      </div>
-      
-      
-      <div class="info-block">
-        <h3>Nearby Landmarks:</h3>
-        <p>Zoo Miami</p>
-      </div>
-      
-      
-      <div class="info-block">
-        <h3>About Miami Team</h3>
-        <p>Local emergency service experts</p>
-      </div>
-      
-      
-      
-      
-      
-      
-      
-      <div class="info-block">
-        <h3>Request a Callback</h3>
-        <form id="lead-form">
-          <input type="text" name="name" placeholder="Your Name" required>
-          <input type="tel" name="phone" placeholder="Phone Number" required>
-          <input type="hidden" name="zip" value="33186">
-          <input type="hidden" name="city" value="Miami">
-          <input type="hidden" name="category" id="lead-category" value="">
-          <button type="submit">Get Free Quote</button>
-        </form>
-      </div>
-    </div>
+  <main class="container legal-page">
+    <h1>Terms of Service</h1>
+    <p class="last-updated">Last updated: February 20, 2026</p>
+    
+    <section class="terms-section">
+      <h2>Acceptance of Terms</h2>
+      <p>By accessing or using Emergency Services USA, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our website.</p>
+    </section>
+    
+    <section class="terms-section">
+      <h2>Referral Platform</h2>
+      <p>Emergency Services USA operates as a referral platform only. We connect users with independent service providers. We are not a contractor, repair company, or service provider. We do not perform any work and are not responsible for the quality, timeliness, or legality of work performed by third-party providers.</p>
+    </section>
+    
+    <section class="terms-section">
+      <h2>No Guarantees</h2>
+      <p>We do not guarantee the quality, timeliness, or legality of work performed by third-party service providers. Users are responsible for verifying licenses, insurance, and qualifications before hiring.</p>
+    </section>
+    
+    <section class="terms-section">
+      <h2>Limitation of Liability</h2>
+      <p>To the maximum extent permitted by law, Emergency Services USA shall not be liable for any direct, indirect, incidental, special, consequential, or punitive damages arising from your use of this site or services booked through this site.</p>
+    </section>
+    
+    <section class="terms-section">
+      <h2>Indemnification</h2>
+      <p>You agree to indemnify and hold harmless Emergency Services USA and its officers, directors, employees, and agents from any claims, damages, losses, liabilities, costs, and expenses arising from your use of third-party services or your violation of these terms.</p>
+    </section>
+    
+    <section class="terms-section">
+      <h2>Governing Law</h2>
+      <p>These terms shall be governed by and construed in accordance with the laws of the State of Florida, without regard to its conflict of law provisions.</p>
+    </section>
+    
+    <section class="terms-section">
+      <h2>Changes to Terms</h2>
+      <p>We reserve the right to modify these terms at any time. Continued use of the site after changes constitutes acceptance of the new terms.</p>
+    </section>
+    
+    <section class="terms-section">
+      <h2>Contact</h2>
+      <p>For questions about these terms, contact us at help@emergencyservicesusa.com or +1-888-555-1234.</p>
+    </section>
   </main>
   
   <footer>
@@ -142,40 +133,5 @@
       </div>
     </div>
   </footer>
-  
-  <script>
-    const categorySelect = document.getElementById('category-select');
-    const callButton = document.getElementById('call-button');
-    const leadCategory = document.getElementById('lead-category');
-    
-    categorySelect.addEventListener('change', function() {
-      if (this.value) {
-        callButton.href = 'tel:' + this.value;
-        callButton.classList.remove('disabled');
-        if (leadCategory) leadCategory.value = this.options[this.selectedIndex].text;
-      } else {
-        callButton.href = '#';
-        callButton.classList.add('disabled');
-      }
-    });
-    
-    document.getElementById('lead-form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const formData = new FormData(this);
-      const data = {};
-      formData.forEach((value, key) => data[key] = value);
-      data.pageUrl = window.location.href;
-      
-      fetch('https://script.google.com/macros/s/AKfycbyA37AFoEsHNHXAZkkHE-rdLM1xNcCSXpO7D0FL5_BsL0eQypuH031jmea_SklypxVN/exec', {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data)
-      }).then(() => {
-        alert('Thank you! We will contact you shortly.');
-        this.reset();
-      });
-    });
-  </script>
 </body>
 </html>

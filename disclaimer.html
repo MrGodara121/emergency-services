@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Miami Emergency Services</title>
-  <meta name="description" content="Find emergency services in Miami">
+  <title>Legal Disclaimers - Emergency Services USA</title>
+  <meta name="robots" content="noindex, follow">
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -47,58 +47,40 @@
     </div>
   </header>
   
-  <main>
-    <div class="container">
-      <h1>Emergency Services in Miami, FL</h1>
-      
-      <div class="call-block">
-        <h3>Select Service:</h3>
-        <select id="category-select" required>
-          <option value="">-- Choose a category --</option>
-          <option value="+1-305-555-1234">Water Damage</option><option value="+1-305-555-5678">Mold Remediation</option>
-        </select>
-        
-        <a id="call-button" href="#" class="call-button disabled">
-          <i class="fas fa-phone-alt"></i> Call Now
-        </a>
-      </div>
-      
-      
-      <div class="info-block">
-        <h3>Neighborhoods Served:</h3>
-        <p>The Hammocks, Kendall</p>
-      </div>
-      
-      
-      <div class="info-block">
-        <h3>Nearby Landmarks:</h3>
-        <p>Zoo Miami</p>
-      </div>
-      
-      
-      <div class="info-block">
-        <h3>About Miami Team</h3>
-        <p>Local emergency service experts</p>
-      </div>
-      
-      
-      
-      
-      
-      
-      
-      <div class="info-block">
-        <h3>Request a Callback</h3>
-        <form id="lead-form">
-          <input type="text" name="name" placeholder="Your Name" required>
-          <input type="tel" name="phone" placeholder="Phone Number" required>
-          <input type="hidden" name="zip" value="33186">
-          <input type="hidden" name="city" value="Miami">
-          <input type="hidden" name="category" id="lead-category" value="">
-          <button type="submit">Get Free Quote</button>
-        </form>
-      </div>
-    </div>
+  <main class="container legal-page">
+    <h1>Legal Disclaimers & Disclosures</h1>
+    
+    <section class="disclaimer-section">
+      <h2><i class="fas fa-handshake"></i> Affiliate Disclosure</h2>
+      <p>Emergency Services USA participates in various affiliate marketing programs, which means we may earn commissions on purchases made through our links to retailer sites. This does not affect the price you pay.</p>
+      <p>We only recommend products and services we believe will add value to our visitors. Affiliate links are clearly marked where applicable.</p>
+    </section>
+    
+    <section class="disclaimer-section">
+      <h2><i class="fas fa-shield-alt"></i> Insurance Information Disclaimer</h2>
+      <p>The insurance information provided on this website is for general informational purposes only and does not constitute legal or professional advice. Coverage varies by policy, insurer, and individual circumstances. Always consult with a licensed insurance agent and read your policy carefully.</p>
+    </section>
+    
+    <section class="disclaimer-section">
+      <h2><i class="fas fa-tools"></i> Emergency Services Disclaimer</h2>
+      <p>Emergency Services USA is a referral platform connecting users with local service providers. We are not a contractor, repair company, or service provider. We do not perform any work and are not responsible for the quality of work performed by third-party providers.</p>
+      <p>Users are responsible for verifying licenses, insurance, and qualifications before hiring any service provider.</p>
+    </section>
+    
+    <section class="disclaimer-section">
+      <h2><i class="fas fa-chart-line"></i> Earnings Disclaimer</h2>
+      <p>Any earnings, revenue, or income claims made on this website are estimates and examples only. Your results may vary and depend on many factors including but not limited to your market, effort, and skill. There is no guarantee of earnings.</p>
+    </section>
+    
+    <section class="disclaimer-section">
+      <h2><i class="fas fa-star"></i> Testimonials Disclaimer</h2>
+      <p>Testimonials appearing on this site are individual experiences. They do not guarantee similar results for others. Some testimonials may have been edited for clarity or length.</p>
+    </section>
+    
+    <section class="disclaimer-section">
+      <h2><i class="fas fa-copyright"></i> Copyright Notice</h2>
+      <p>© 2025 Emergency Services USA. All rights reserved. Unauthorized use or duplication of any content without express written permission is strictly prohibited.</p>
+    </section>
   </main>
   
   <footer>
@@ -142,40 +124,5 @@
       </div>
     </div>
   </footer>
-  
-  <script>
-    const categorySelect = document.getElementById('category-select');
-    const callButton = document.getElementById('call-button');
-    const leadCategory = document.getElementById('lead-category');
-    
-    categorySelect.addEventListener('change', function() {
-      if (this.value) {
-        callButton.href = 'tel:' + this.value;
-        callButton.classList.remove('disabled');
-        if (leadCategory) leadCategory.value = this.options[this.selectedIndex].text;
-      } else {
-        callButton.href = '#';
-        callButton.classList.add('disabled');
-      }
-    });
-    
-    document.getElementById('lead-form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const formData = new FormData(this);
-      const data = {};
-      formData.forEach((value, key) => data[key] = value);
-      data.pageUrl = window.location.href;
-      
-      fetch('https://script.google.com/macros/s/AKfycbyA37AFoEsHNHXAZkkHE-rdLM1xNcCSXpO7D0FL5_BsL0eQypuH031jmea_SklypxVN/exec', {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data)
-      }).then(() => {
-        alert('Thank you! We will contact you shortly.');
-        this.reset();
-      });
-    });
-  </script>
 </body>
 </html>

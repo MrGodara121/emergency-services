@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Miami Emergency Services</title>
-  <meta name="description" content="Find emergency services in Miami">
+  <title>Insurance Coverage for Emergency Services | Emergency Services USA</title>
+  <meta name="description" content="Complete insurance guides for water damage, mold, plumbing, HVAC, roofing, and more. Learn what's covered and how to file claims.">
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -47,57 +47,76 @@
     </div>
   </header>
   
-  <main>
-    <div class="container">
-      <h1>Emergency Services in Miami, FL</h1>
+  <main class="container">
+    <h1>Insurance Coverage Guides</h1>
+    <p class="subhead">Understand your coverage – free claim assistance</p>
+    
+    <div class="insurance-grid">
       
-      <div class="call-block">
-        <h3>Select Service:</h3>
-        <select id="category-select" required>
-          <option value="">-- Choose a category --</option>
-          <option value="+1-305-555-1234">Water Damage</option><option value="+1-305-555-5678">Mold Remediation</option>
-        </select>
-        
-        <a id="call-button" href="#" class="call-button disabled">
-          <i class="fas fa-phone-alt"></i> Call Now
-        </a>
-      </div>
+        <div class="insurance-card">
+          <h2><a href="/insurance/water-damage.html">Water Damage Restoration Insurance</a></h2>
+          <p>Most homeowner policies cover sudden water damage</p>
+          <a href="/insurance/water-damage.html" class="btn">Read Guide →</a>
+        </div>
       
+        <div class="insurance-card">
+          <h2><a href="/insurance/mold-remediation.html">Mold Remediation Insurance</a></h2>
+          <p>Mold removal covered if caused by covered water damage</p>
+          <a href="/insurance/mold-remediation.html" class="btn">Read Guide →</a>
+        </div>
       
-      <div class="info-block">
-        <h3>Neighborhoods Served:</h3>
-        <p>The Hammocks, Kendall</p>
-      </div>
+        <div class="insurance-card">
+          <h2><a href="/insurance/locksmith.html">Emergency Locksmith Insurance</a></h2>
+          <p>Not typically covered by insurance</p>
+          <a href="/insurance/locksmith.html" class="btn">Read Guide →</a>
+        </div>
       
+        <div class="insurance-card">
+          <h2><a href="/insurance/plumbing.html">Emergency Plumbing Insurance</a></h2>
+          <p>Sudden pipe bursts usually covered</p>
+          <a href="/insurance/plumbing.html" class="btn">Read Guide →</a>
+        </div>
       
-      <div class="info-block">
-        <h3>Nearby Landmarks:</h3>
-        <p>Zoo Miami</p>
-      </div>
+        <div class="insurance-card">
+          <h2><a href="/insurance/hvac.html">HVAC Services Insurance</a></h2>
+          <p>Coverage varies by policy</p>
+          <a href="/insurance/hvac.html" class="btn">Read Guide →</a>
+        </div>
       
+        <div class="insurance-card">
+          <h2><a href="/insurance/roofing.html">Roofing Repair Insurance</a></h2>
+          <p>Storm damage typically covered</p>
+          <a href="/insurance/roofing.html" class="btn">Read Guide →</a>
+        </div>
       
-      <div class="info-block">
-        <h3>About Miami Team</h3>
-        <p>Local emergency service experts</p>
-      </div>
+        <div class="insurance-card">
+          <h2><a href="/insurance/pest-control.html">Pest Control Insurance</a></h2>
+          <p>Not typically covered</p>
+          <a href="/insurance/pest-control.html" class="btn">Read Guide →</a>
+        </div>
       
+        <div class="insurance-card">
+          <h2><a href="/insurance/solar.html">Solar Services Insurance</a></h2>
+          <p>Specialty coverage available</p>
+          <a href="/insurance/solar.html" class="btn">Read Guide →</a>
+        </div>
       
+        <div class="insurance-card">
+          <h2><a href="/insurance/junk-removal.html">Junk Removal Insurance</a></h2>
+          <p>Not covered by insurance</p>
+          <a href="/insurance/junk-removal.html" class="btn">Read Guide →</a>
+        </div>
       
+        <div class="insurance-card">
+          <h2><a href="/insurance/tree-services.html">Tree Services Insurance</a></h2>
+          <p>Storm damage may be covered</p>
+          <a href="/insurance/tree-services.html" class="btn">Read Guide →</a>
+        </div>
       
-      
-      
-      
-      <div class="info-block">
-        <h3>Request a Callback</h3>
-        <form id="lead-form">
-          <input type="text" name="name" placeholder="Your Name" required>
-          <input type="tel" name="phone" placeholder="Phone Number" required>
-          <input type="hidden" name="zip" value="33186">
-          <input type="hidden" name="city" value="Miami">
-          <input type="hidden" name="category" id="lead-category" value="">
-          <button type="submit">Get Free Quote</button>
-        </form>
-      </div>
+    </div>
+    
+    <div class="disclaimer-box">
+      <p><i class="fas fa-balance-scale"></i> This information is for general guidance only. Always check your specific policy and consult with your insurance agent.</p>
     </div>
   </main>
   
@@ -142,40 +161,5 @@
       </div>
     </div>
   </footer>
-  
-  <script>
-    const categorySelect = document.getElementById('category-select');
-    const callButton = document.getElementById('call-button');
-    const leadCategory = document.getElementById('lead-category');
-    
-    categorySelect.addEventListener('change', function() {
-      if (this.value) {
-        callButton.href = 'tel:' + this.value;
-        callButton.classList.remove('disabled');
-        if (leadCategory) leadCategory.value = this.options[this.selectedIndex].text;
-      } else {
-        callButton.href = '#';
-        callButton.classList.add('disabled');
-      }
-    });
-    
-    document.getElementById('lead-form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const formData = new FormData(this);
-      const data = {};
-      formData.forEach((value, key) => data[key] = value);
-      data.pageUrl = window.location.href;
-      
-      fetch('https://script.google.com/macros/s/AKfycbyA37AFoEsHNHXAZkkHE-rdLM1xNcCSXpO7D0FL5_BsL0eQypuH031jmea_SklypxVN/exec', {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data)
-      }).then(() => {
-        alert('Thank you! We will contact you shortly.');
-        this.reset();
-      });
-    });
-  </script>
 </body>
 </html>
