@@ -1,8 +1,128 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sitemap - Emergency Services USA</title>
+  <meta name="description" content="Complete sitemap for Emergency Services USA - Find all our emergency service pages and service areas.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="/style.css">
+  <style>
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: #f8f9fa;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 20px;
+    }
+    
+    h1 {
+      font-size: 2.5rem;
+      color: #003366;
+      margin-bottom: 2rem;
+      border-bottom: 3px solid #dc3545;
+      padding-bottom: 1rem;
+    }
+    
+    h2 {
+      font-size: 1.8rem;
+      color: #003366;
+      margin: 2rem 0 1rem;
+    }
+    
+    h3 {
+      font-size: 1.3rem;
+      color: #003366;
+      margin: 1.5rem 0 1rem;
+    }
+    
+    ul {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 0.5rem;
+    }
+    
+    li {
+      margin-bottom: 0.5rem;
+    }
+    
+    a {
+      color: #003366;
+      text-decoration: none;
+      padding: 0.5rem;
+      display: block;
+      border-radius: 5px;
+      transition: all 0.3s;
+    }
+    
+    a:hover {
+      background: #003366;
+      color: white;
+      padding-left: 1rem;
+    }
+    
+    a i {
+      margin-right: 0.5rem;
+      color: #dc3545;
+    }
+    
+    a:hover i {
+      color: #ffcc00;
+    }
+    
+    .site-info {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      margin: 2rem 0;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    .contact-info {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+    
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .contact-item i {
+      color: #dc3545;
+      font-size: 1.2rem;
+    }
+    
+    .footer {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid #dee2e6;
+      text-align: center;
+      color: #6c757d;
+    }
+    
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+      
+      ul {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -72,17 +192,54 @@
   </header>
   
   <main class="container">
-    <h1>Website Sitemap</h1>
+    <h1><i class="fas fa-sitemap"></i> Website Sitemap</h1>
     
-    <h2>Emergency Services</h2>
-    <ul>
-      <li><a href="/category/water-damage.html">Water Damage Restoration</a></li><li><a href="/category/mold-remediation.html">Mold Remediation</a></li><li><a href="/category/locksmith.html">Emergency Locksmith</a></li><li><a href="/category/plumbing.html">Emergency Plumbing</a></li><li><a href="/category/hvac.html">HVAC Services</a></li><li><a href="/category/roofing.html">Roofing Repair</a></li><li><a href="/category/pest-control.html">Pest Control</a></li><li><a href="/category/solar.html">Solar Services</a></li><li><a href="/category/junk-removal.html">Junk Removal</a></li><li><a href="/category/tree-services.html">Tree Services</a></li>
-    </ul>
+    <section>
+      <h2><i class="fas fa-tools"></i> Emergency Services</h2>
+      
+      <ul>
+        <li><a href="/category/water-damage.html"><i class="fas fa-chevron-right"></i> Water Damage Restoration</a></li><li><a href="/category/mold-remediation.html"><i class="fas fa-chevron-right"></i> Mold Remediation</a></li><li><a href="/category/locksmith.html"><i class="fas fa-chevron-right"></i> Emergency Locksmith</a></li><li><a href="/category/plumbing.html"><i class="fas fa-chevron-right"></i> Emergency Plumbing</a></li><li><a href="/category/hvac.html"><i class="fas fa-chevron-right"></i> HVAC Services</a></li><li><a href="/category/roofing.html"><i class="fas fa-chevron-right"></i> Roofing Repair</a></li><li><a href="/category/pest-control.html"><i class="fas fa-chevron-right"></i> Pest Control</a></li><li><a href="/category/solar.html"><i class="fas fa-chevron-right"></i> Solar Services</a></li><li><a href="/category/junk-removal.html"><i class="fas fa-chevron-right"></i> Junk Removal</a></li><li><a href="/category/tree-services.html"><i class="fas fa-chevron-right"></i> Tree Services</a></li>
+      </ul>
+      
+    </section>
     
-    <h2>Service Areas (ZIP Codes)</h2>
-    <ul>
-      <li><a href="/zip/90210.html">Beverly Hills, CA 90210</a></li><li><a href="/zip/33186.html">Miami, FL 33186</a></li>
-    </ul>
+    <section>
+      <h2><i class="fas fa-map-marker-alt"></i> Service Areas (ZIP Codes)</h2>
+      
+      <ul>
+        <li><a href="/zip/90210.html"><i class="fas fa-map-pin"></i> Beverly Hills, CA 90210</a></li><li><a href="/zip/33186.html"><i class="fas fa-map-pin"></i> Miami, FL 33186</a></li>
+      </ul>
+      
+    </section>
+    
+    <div class="site-info">
+      <h3><i class="fas fa-truck-medical"></i> Emergency Services USA</h3>
+      <p>Your trusted nationwide network of emergency service professionals. Available 24/7/365.</p>
+      
+      <div class="contact-info">
+        <div class="contact-item">
+          <i class="fas fa-phone-alt"></i>
+          <a href="tel:+1-888-555-1234">+1-888-555-1234</a>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:help@emergencyservicesusa.com">help@emergencyservicesusa.com</a>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-globe"></i>
+          <a href="https://emargencyservicesm.netlify.app/">https://emargencyservicesm.netlify.app/</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer">
+      <p>© 2025 Emergency Services USA. All rights reserved.</p>
+      <p>
+        <a href="/disclaimer.html">Disclaimer</a> | 
+        <a href="/privacy.html">Privacy Policy</a> | 
+        <a href="/terms.html">Terms of Service</a>
+      </p>
+    </div>
   </main>
   
   <footer>
@@ -137,5 +294,7 @@
       </div>
     </div>
   </footer>
+  
+  <script src="/script.js"></script>
 </body>
 </html>
