@@ -1,80 +1,658 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Miami Beach 33139 Emergency Services | 24/7 Fast Help</title>
-  <meta name="description" content="Urgent Miami Beach 33139 services. Professional experts available 24/7. Call now!">
+  <title>Miami Beach Emergency Services - 24/7 Florida | Call Now</title>
+  <meta name="description" content="Find 24/7 emergency services in Miami Beach, Florida (33139). Water damage, mold, locksmith, plumbing, HVAC, roofing, pest control, solar, junk removal, tree services. Call now!">
+  <meta name="keywords" content="Miami Beach emergency services, Miami Beach repairs">
+  
+  <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- CSS -->
   <link rel="stylesheet" href="/style.css">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Emergency Services in Miami Beach",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "",
-      "addressLocality": "Miami Beach",
-      "addressRegion": "Florida",
-      "postalCode": "33139",
-      "addressCountry": "US"
-    },
-    "telephone": "",
-    "priceRange": "$45 - $800"
-  }
-  </script>
+  
+  <style>
+    /* Additional ZIP Page Specific Styles */
+    .zip-page {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 20px;
+    }
+    
+    .zip-page h1 {
+      font-size: 2.5rem;
+      color: #003366;
+      margin-bottom: 2rem;
+      text-align: center;
+      font-weight: 700;
+    }
+    
+    .call-block {
+      background: white;
+      border-radius: 16px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      border: 1px solid #e9ecef;
+      text-align: center;
+    }
+    
+    .call-block h3 {
+      color: #003366;
+      margin-bottom: 1.5rem;
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+    
+    .call-block select {
+      width: 100%;
+      padding: 1rem;
+      border: 2px solid #e9ecef;
+      border-radius: 8px;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      transition: all 0.3s;
+      font-family: 'Inter', sans-serif;
+    }
+    
+    .call-block select:focus {
+      outline: none;
+      border-color: #003366;
+    }
+    
+    .call-button-container {
+      margin-top: 1rem;
+    }
+    
+    #call-button {
+      display: inline-block;
+      background: #dc3545;
+      color: white;
+      padding: 1rem 2.5rem;
+      border-radius: 50px;
+      font-size: 1.3rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.3s;
+      border: 2px solid transparent;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    
+    #call-button.disabled {
+      opacity: 0.5;
+      pointer-events: none;
+      background: #6c757d;
+    }
+    
+    #call-button:not(.disabled):hover {
+      background: #b02a37;
+      transform: scale(1.05);
+      border-color: #ffcc00;
+      box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+    }
+    
+    .call-note {
+      margin-top: 0.5rem;
+      color: #6c757d;
+      font-size: 0.9rem;
+    }
+    
+    .info-block {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      border: 1px solid #e9ecef;
+    }
+    
+    .info-block h3 {
+      color: #003366;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+      border-bottom: 2px solid #e9ecef;
+      padding-bottom: 0.5rem;
+      font-weight: 600;
+    }
+    
+    .info-block h3 i {
+      color: #dc3545;
+      margin-right: 0.5rem;
+    }
+    
+    .neighborhoods-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+    
+    .neighborhood-tag {
+      background: #e9ecef;
+      padding: 0.5rem 1rem;
+      border-radius: 50px;
+      font-size: 0.9rem;
+      border: 1px solid #dee2e6;
+    }
+    
+    .landmarks-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+    
+    .landmark-tag {
+      background: linear-gradient(135deg, #003366, #dc3545);
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 50px;
+      font-size: 0.9rem;
+    }
+    
+    .author-bio {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      background: #e9ecef;
+      padding: 1.5rem;
+      border-radius: 8px;
+    }
+    
+    .author-avatar {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, #003366, #dc3545);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      color: white;
+    }
+    
+    .internal-links {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 0.5rem;
+      padding: 0;
+    }
+    
+    .internal-links li a {
+      color: #003366;
+      text-decoration: none;
+      padding: 0.5rem;
+      display: block;
+      border-radius: 5px;
+      transition: all 0.3s;
+    }
+    
+    .internal-links li a:hover {
+      background: #e9ecef;
+      color: #dc3545;
+      padding-left: 1rem;
+    }
+    
+    .faq-item {
+      border: 1px solid #e9ecef;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      overflow: hidden;
+    }
+    
+    .faq-question {
+      background: #e9ecef;
+      padding: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      position: relative;
+      transition: all 0.3s;
+    }
+    
+    .faq-question:hover {
+      background: #dee2e6;
+    }
+    
+    .faq-question i {
+      color: #dc3545;
+      margin-right: 0.5rem;
+    }
+    
+    .faq-question:after {
+      content: '+';
+      position: absolute;
+      right: 1rem;
+      font-size: 1.5rem;
+      color: #003366;
+    }
+    
+    .faq-question.active:after {
+      content: '-';
+    }
+    
+    .faq-answer {
+      padding: 1rem;
+      display: none;
+      background: white;
+      line-height: 1.6;
+    }
+    
+    .faq-answer.show {
+      display: block;
+    }
+    
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+    
+    .review-card {
+      background: #e9ecef;
+      padding: 1.5rem;
+      border-radius: 8px;
+      border-left: 4px solid #dc3545;
+    }
+    
+    .review-rating {
+      color: #ffc107;
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+    }
+    
+    .review-author {
+      font-weight: 600;
+      color: #003366;
+      margin-top: 1rem;
+    }
+    
+    .review-date {
+      font-size: 0.8rem;
+      color: #6c757d;
+      margin-top: 0.25rem;
+    }
+    
+    .lead-form {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    .form-group {
+      margin-bottom: 1rem;
+    }
+    
+    .form-group input {
+      width: 100%;
+      padding: 1rem;
+      border: 2px solid #e9ecef;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: all 0.3s;
+      font-family: 'Inter', sans-serif;
+    }
+    
+    .form-group input:focus {
+      outline: none;
+      border-color: #003366;
+    }
+    
+    .submit-btn {
+      background: #003366;
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+      width: 100%;
+    }
+    
+    .submit-btn:hover {
+      background: #dc3545;
+      transform: translateY(-2px);
+    }
+    
+    .nearby-cities {
+      margin-top: 2rem;
+      padding: 1.5rem;
+      background: #e9ecef;
+      border-radius: 8px;
+      text-align: center;
+    }
+    
+    .nearby-cities h3 {
+      color: #003366;
+      margin-bottom: 1rem;
+    }
+    
+    .city-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+    
+    .city-links a {
+      color: #003366;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 50px;
+      background: white;
+      transition: all 0.3s;
+    }
+    
+    .city-links a:hover {
+      background: #003366;
+      color: white;
+    }
+    
+    @media (max-width: 768px) {
+      .zip-page h1 {
+        font-size: 2rem;
+      }
+      
+      .call-block select {
+        font-size: 16px;
+      }
+      
+      .author-bio {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .internal-links {
+        grid-template-columns: 1fr;
+      }
+      
+      .reviews-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .city-links {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .city-links a {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
 </head>
 <body>
-  <header>[header same as index]</header>
-  <main>
-    <section class="hero">
-      <div class="container">
-        <h1>Expert 24/7 Home Services in Miami Beach, 33139</h1>
-        <p class="subhead">Professional Experts Serving South Beach and Areas Near Ocean Drive.</p>
-        <div class="call-block">
-          <select id="category-select">
-            <option value="">Select a category</option>
-            
-          </select>
-          <a id="call-button" href="#" class="call-button"><i class="fas fa-phone-alt"></i> Call Now</a>
-          <button id="lead-btn" class="secondary-btn">Request Callback</button>
-        </div>
-        <div class="trust-badges">
-          <span class="badge"><i class="fas fa-check-circle"></i> BBB Accredited</span>
-          <span class="badge"><i class="fas fa-clock"></i> 24/7 Service</span>
-          <span class="badge"><i class="fas fa-id-card"></i> Licensed & Insured</span>
+  <header>
+    <div class="container header-container">
+      <div class="logo">
+        <i class="fas fa-truck-medical"></i>
+        <div>
+          <h2>Emergency<span style="color: #ffcc00;">Services</span></h2>
+          <p>USA • 24/7 • Licensed & Insured</p>
         </div>
       </div>
-    </section>
+      
+      <nav class="desktop-nav">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li class="dropdown">
+            <a href="#">Services <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="/category/0.html"><i class="fas undefined"></i> undefined</a></li><li><a href="/category/1.html"><i class="fas undefined"></i> undefined</a></li><li><a href="/category/2.html"><i class="fas undefined"></i> undefined</a></li><li><a href="/category/3.html"><i class="fas undefined"></i> undefined</a></li><li><a href="/category/4.html"><i class="fas undefined"></i> undefined</a></li><li><a href="/category/5.html"><i class="fas undefined"></i> undefined</a></li><li><a href="/category/6.html"><i class="fas undefined"></i> undefined</a></li><li><a href="/category/7.html"><i class="fas undefined"></i> undefined</a></li><li><a href="/category/8.html"><i class="fas undefined"></i> undefined</a></li><li><a href="/category/9.html"><i class="fas undefined"></i> undefined</a></li>
+            </ul>
+          </li>
+          <li><a href="/blog/">Resources</a></li>
+          <li><a href="/calculators/">Calculators</a></li>
+          <li><a href="/insurance/">Insurance</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      
+      <div class="emergency-call desktop-call">
+        <a href="tel:+1-888-555-1234" class="call-button">
+          <i class="fas fa-phone-alt"></i> +1-888-555-1234
+        </a>
+      </div>
+      
+      <div class="mobile-menu-toggle" id="mobile-menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
     
-    <section class="info-block">
-      <h3>Local Information</h3>
-      <p><strong>Neighborhoods:</strong> South Beach, Art Deco District, Flamingo Park, Venetian Islands, Belle Isle, South of Fifth (SoFi), West Ave</p>
-      <p><strong>Nearby Landmarks:</strong> Ocean Drive, Lincoln Road Mall, South Pointe Park</p>
-    </section>
-    
-    <section class="info-block"><h3>About the Author</h3><p><strong>Miami Beach Support Team</strong> – Local home maintenance specialists serving the Miami Beach community 24/7.</p></section>
-    
-    <section class="info-block"><h3>Related Services</h3><ul><li><a href="/category/miami-beach-33139-home-services.html">Miami Beach 33139 home services</a></li><li><a href="/category/south-beach-emergency-repair.html">South Beach emergency repair</a></li><li><a href="/category/ocean-drive-local-pros.html">Ocean Drive local pros</a></li></ul></section>
-    
-    
-    
-    
-    
-    <section class="info-block">
-      <h3>Request a Callback</h3>
-      <form id="lead-form">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="tel" name="phone" placeholder="Phone Number" required>
-        <input type="email" name="email" placeholder="Email (optional)">
-        <input type="hidden" name="zip" value="33139">
-        <input type="hidden" name="category" id="lead-category" value="">
-        <button type="submit">Submit</button>
-      </form>
-    </section>
+    <!-- Mobile Sidebar -->
+    <div class="mobile-sidebar" id="mobile-sidebar">
+      <div class="sidebar-header">
+        <i class="fas fa-truck-medical"></i>
+        <h2>Emergency<span>Services</span></h2>
+        <button class="close-sidebar" id="close-sidebar"><i class="fas fa-times"></i></button>
+      </div>
+      <ul class="sidebar-nav">
+        <li><a href="/"><i class="fas fa-home"></i> Home</a></li>
+        <li class="accordion">
+          <a href="#" class="accordion-toggle"><i class="fas fa-list"></i> Services <i class="fas fa-chevron-down"></i></a>
+          <ul class="accordion-menu">
+            <li style="padding-left: 20px;"><a href="/category/0.html"><i class="fas undefined"></i> undefined</a></li><li style="padding-left: 20px;"><a href="/category/1.html"><i class="fas undefined"></i> undefined</a></li><li style="padding-left: 20px;"><a href="/category/2.html"><i class="fas undefined"></i> undefined</a></li><li style="padding-left: 20px;"><a href="/category/3.html"><i class="fas undefined"></i> undefined</a></li><li style="padding-left: 20px;"><a href="/category/4.html"><i class="fas undefined"></i> undefined</a></li><li style="padding-left: 20px;"><a href="/category/5.html"><i class="fas undefined"></i> undefined</a></li><li style="padding-left: 20px;"><a href="/category/6.html"><i class="fas undefined"></i> undefined</a></li><li style="padding-left: 20px;"><a href="/category/7.html"><i class="fas undefined"></i> undefined</a></li><li style="padding-left: 20px;"><a href="/category/8.html"><i class="fas undefined"></i> undefined</a></li><li style="padding-left: 20px;"><a href="/category/9.html"><i class="fas undefined"></i> undefined</a></li>
+          </ul>
+        </li>
+        <li><a href="/blog/"><i class="fas fa-blog"></i> Resources</a></li>
+        <li><a href="/calculators/"><i class="fas fa-calculator"></i> Calculators</a></li>
+        <li><a href="/insurance/"><i class="fas fa-shield-alt"></i> Insurance</a></li>
+        <li><a href="/contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+      </ul>
+      <div class="sidebar-call">
+        <a href="tel:+1-888-555-1234" class="call-button">
+          <i class="fas fa-phone-alt"></i> Call Now
+        </a>
+      </div>
+    </div>
+    <div class="overlay" id="overlay"></div>
+  </header>
+  
+  <main>
+    <div class="container zip-page">
+      <h1>Emergency Services in Miami Beach, Florida</h1>
+      
+      <div class="call-block">
+        <h3><i class="fas fa-tools"></i> Select Service Needed:</h3>
+        <select id="category-select" required>
+          <option value="">-- Choose a category --</option>
+          
+        </select>
+        
+        <div class="call-button-container">
+          <a id="call-button" href="#" class="call-button disabled">
+            <i class="fas fa-phone-alt"></i> Call Now
+          </a>
+          <p class="call-note">Select a category to enable call</p>
+        </div>
+      </div>
+      
+      
+      <div class="info-block">
+        <h3><i class="fas fa-map-marked-alt"></i> Neighborhoods Served:</h3>
+        <div class="neighborhoods-list">
+          <span class="neighborhood-tag"><i class="fas fa-home"></i> South Beach</span><span class="neighborhood-tag"><i class="fas fa-home"></i> Art Deco District</span><span class="neighborhood-tag"><i class="fas fa-home"></i> Flamingo Park</span><span class="neighborhood-tag"><i class="fas fa-home"></i> Venetian Islands</span><span class="neighborhood-tag"><i class="fas fa-home"></i> Belle Isle</span><span class="neighborhood-tag"><i class="fas fa-home"></i> South of Fifth (SoFi)</span><span class="neighborhood-tag"><i class="fas fa-home"></i> West Ave</span>
+        </div>
+      </div>
+      
+      
+      <div class="info-block">
+        <h3><i class="fas fa-landmark"></i> Nearby Landmarks:</h3>
+        <div class="landmarks-list">
+          <span class="landmark-tag"><i class="fas fa-map-pin"></i> Ocean Drive</span><span class="landmark-tag"><i class="fas fa-map-pin"></i> Lincoln Road Mall</span><span class="landmark-tag"><i class="fas fa-map-pin"></i> South Pointe Park</span>
+        </div>
+      </div>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <div class="info-block lead-section">
+        <h3><i class="fas fa-phone-volume"></i> Request a Callback</h3>
+        <form id="lead-form" class="lead-form" onsubmit="return submitLead(event)">
+          <div class="form-group">
+            <input type="text" name="name" placeholder="Your Full Name" required>
+          </div>
+          <div class="form-group">
+            <input type="tel" name="phone" placeholder="Phone Number" required>
+          </div>
+          <div class="form-group">
+            <input type="email" name="email" placeholder="Email Address (optional)">
+          </div>
+          <input type="hidden" name="zip" value="33139">
+          <input type="hidden" name="city" value="Miami Beach">
+          <input type="hidden" name="state" value="Florida">
+          <input type="hidden" name="category" id="lead-category" value="">
+          <button type="submit" class="submit-btn">Get Free Quote</button>
+        </form>
+      </div>
+      
+      <div class="nearby-cities">
+        <h3><i class="fas fa-city"></i> Nearby Cities</h3>
+        <div class="city-links">
+          <a href="/zip/90210.html">Beverly Hills</a>
+          <a href="/zip/90211.html">Los Angeles</a>
+          <a href="/zip/90212.html">Santa Monica</a>
+          <a href="/zip/90001.html">Downtown LA</a>
+          <a href="/sitemap.html">View All →</a>
+        </div>
+      </div>
+    </div>
   </main>
-  <footer>[same footer as index]</footer>
+  
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3><i class="fas fa-truck-medical"></i> Emergency Services USA</h3>
+          <p>Your trusted nationwide network of emergency service professionals. Available 24/7/365.</p>
+          <p><i class="fas fa-phone"></i> +1-888-555-1234</p>
+          <p><i class="fas fa-envelope"></i> help@emergencyservicesusa.com</p>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="/category/0.html">undefined</a></li><li><a href="/category/1.html">undefined</a></li><li><a href="/category/2.html">undefined</a></li><li><a href="/category/3.html">undefined</a></li><li><a href="/category/4.html">undefined</a></li><li><a href="/category/5.html">undefined</a></li><li><a href="/category/6.html">undefined</a></li><li><a href="/category/7.html">undefined</a></li><li><a href="/category/8.html">undefined</a></li><li><a href="/category/9.html">undefined</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="/blog/">Emergency Guides</a></li>
+            <li><a href="/calculators/">Cost Calculators</a></li>
+            <li><a href="/insurance/">Insurance Info</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Popular Cities</h3>
+          <ul>
+            <li><a href="/zip/90210.html">Beverly Hills, CA</a></li>
+            <li><a href="/zip/10001.html">New York, NY</a></li>
+            <li><a href="/zip/33186.html">Miami, FL</a></li>
+            <li><a href="/zip/60601.html">Chicago, IL</a></li>
+            <li><a href="/zip/77001.html">Houston, TX</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Legal</h3>
+          <ul>
+            <li><a href="/disclaimer.html">Disclaimers</a></li>
+            <li><a href="/privacy.html">Privacy Policy</a></li>
+            <li><a href="/terms.html">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>© 2025 Emergency Services USA. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  
   <script src="/script.js"></script>
+  <script>
+    // Call button validation
+    const categorySelect = document.getElementById('category-select');
+    const callButton = document.getElementById('call-button');
+    const leadCategory = document.getElementById('lead-category');
+    
+    if (categorySelect && callButton) {
+      categorySelect.addEventListener('change', function() {
+        if (this.value) {
+          callButton.href = 'tel:' + this.value;
+          callButton.classList.remove('disabled');
+          if (leadCategory) leadCategory.value = this.options[this.selectedIndex].text;
+        } else {
+          callButton.href = '#';
+          callButton.classList.add('disabled');
+        }
+      });
+      
+      callButton.addEventListener('click', function(e) {
+        if (!categorySelect.value) {
+          e.preventDefault();
+          alert('Please select a category before calling.');
+          categorySelect.focus();
+        }
+      });
+    }
+    
+    // Lead form submission
+    function submitLead(event) {
+      event.preventDefault();
+      const form = event.target;
+      const data = {};
+      
+      // Collect form data
+      const inputs = form.querySelectorAll('input, select, textarea');
+      inputs.forEach(input => {
+        if (input.name) data[input.name] = input.value;
+      });
+      data.pageUrl = window.location.href;
+      data.timestamp = new Date().toISOString();
+      
+      fetch('https://script.google.com/macros/s/AKfycbyA37AFoEsHNHXAZkkHE-rdLM1xNcCSXpO7D0FL5_BsL0eQypuH031jmea_SklypxVN/exec', {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      }).then(() => {
+        alert('Thank you! We will contact you shortly.');
+        form.reset();
+      }).catch(() => {
+        alert('Thank you! We will contact you shortly.');
+        form.reset();
+      });
+      
+      return false;
+    }
+    
+    // FAQ toggle
+    document.querySelectorAll('.faq-question').forEach(q => {
+      q.addEventListener('click', function() {
+        this.classList.toggle('active');
+        const answer = this.nextElementSibling;
+        if (answer) answer.classList.toggle('show');
+      });
+    });
+  </script>
 </body>
 </html>
