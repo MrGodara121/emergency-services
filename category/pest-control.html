@@ -12,7 +12,7 @@
       <div class="logo">
         <i class="fas fa-truck-medical"></i>
         <div>
-          <h2>Emergency<span style="color: var(--accent);">Services</span></h2>
+          <h2>Emergency<span style="color: #ffcc00;">Services</span></h2>
           <p>USA • 24/7 • Licensed & Insured</p>
         </div>
       </div>
@@ -43,6 +43,34 @@
         <i class="fas fa-bars"></i>
       </div>
     </div>
+    
+    <!-- Mobile Sidebar -->
+    <div class="mobile-sidebar" id="mobile-sidebar">
+      <div class="sidebar-header">
+        <i class="fas fa-truck-medical"></i>
+        <h2>Emergency<span>Services</span></h2>
+        <button class="close-sidebar" id="close-sidebar"><i class="fas fa-times"></i></button>
+      </div>
+      <ul class="sidebar-nav">
+        <li><a href="/"><i class="fas fa-home"></i> Home</a></li>
+        <li class="accordion">
+          <a href="#" class="accordion-toggle"><i class="fas fa-list"></i> Services <i class="fas fa-chevron-down"></i></a>
+          <ul class="accordion-menu">
+            <li style="padding-left: 20px;"><a href="/category/0.html"><i class="fas undefined"></i> undefined</a></li><li style="padding-left: 20px;"><a href="/category/1.html"><i class="fas undefined"></i> undefined</a></li><li style="padding-left: 20px;"><a href="/category/2.html"><i class="fas undefined"></i> undefined</a></li><li style="padding-left: 20px;"><a href="/category/3.html"><i class="fas undefined"></i> undefined</a></li><li style="padding-left: 20px;"><a href="/category/4.html"><i class="fas undefined"></i> undefined</a></li><li style="padding-left: 20px;"><a href="/category/5.html"><i class="fas undefined"></i> undefined</a></li><li style="padding-left: 20px;"><a href="/category/6.html"><i class="fas undefined"></i> undefined</a></li><li style="padding-left: 20px;"><a href="/category/7.html"><i class="fas undefined"></i> undefined</a></li><li style="padding-left: 20px;"><a href="/category/8.html"><i class="fas undefined"></i> undefined</a></li><li style="padding-left: 20px;"><a href="/category/9.html"><i class="fas undefined"></i> undefined</a></li>
+          </ul>
+        </li>
+        <li><a href="/blog/"><i class="fas fa-blog"></i> Resources</a></li>
+        <li><a href="/calculators/"><i class="fas fa-calculator"></i> Calculators</a></li>
+        <li><a href="/insurance/"><i class="fas fa-shield-alt"></i> Insurance</a></li>
+        <li><a href="/contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+      </ul>
+      <div class="sidebar-call">
+        <a href="tel:+1-888-555-1234" class="call-button">
+          <i class="fas fa-phone-alt"></i> Call Now
+        </a>
+      </div>
+    </div>
+    <div class="overlay" id="overlay"></div>
   </header>
   
   <main class="container">
@@ -56,10 +84,14 @@
     
     <div class="info-block">
       <h3>Insurance Information</h3>
-      <p>Not typically covered</p>
+      <p>Not typically covered. Termite bond and quarterly plans available.</p>
     </div>
     
     
+    <div class="info-block">
+      <h3>Cost Calculator</h3>
+      <a href="/calculators/pest-control" class="btn">Calculate Estimate →</a>
+    </div>
     
     
     
@@ -81,7 +113,7 @@
       <div class="footer-grid">
         <div class="footer-col">
           <h3><i class="fas fa-truck-medical"></i> Emergency Services USA</h3>
-          <p>Your trusted nationwide network of emergency service professionals.</p>
+          <p>Your trusted nationwide network of emergency service professionals. Available 24/7/365.</p>
           <p><i class="fas fa-phone"></i> +1-888-555-1234</p>
           <p><i class="fas fa-envelope"></i> help@emergencyservicesusa.com</p>
         </div>
@@ -99,6 +131,17 @@
             <li><a href="/blog/">Emergency Guides</a></li>
             <li><a href="/calculators/">Cost Calculators</a></li>
             <li><a href="/insurance/">Insurance Info</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Popular Cities</h3>
+          <ul>
+            <li><a href="/zip/90210.html">Beverly Hills, CA</a></li>
+            <li><a href="/zip/10001.html">New York, NY</a></li>
+            <li><a href="/zip/33186.html">Miami, FL</a></li>
+            <li><a href="/zip/60601.html">Chicago, IL</a></li>
+            <li><a href="/zip/77001.html">Houston, TX</a></li>
           </ul>
         </div>
         

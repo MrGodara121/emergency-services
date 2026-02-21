@@ -7,7 +7,7 @@
   <meta name="description" content="Complete insurance guide for Water Damage Restoration. Learn what's covered, exclusions, and how to file claims.">
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How fast can you respond?","acceptedAnswer":{"@type":"Answer","text":"We respond within 30 minutes in most areas."}},{"@type":"Question","name":"Do you work with insurance?","acceptedAnswer":{"@type":"Answer","text":"Yes, we work with all major insurance companies."}}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much does water damage restoration cost?","acceptedAnswer":{"@type":"Answer","text":"Costs vary based on extent. Average $3-7 per sq ft. Free estimates provided."}}]}</script>
 </head>
 <body>
   <header>
@@ -15,7 +15,7 @@
       <div class="logo">
         <i class="fas fa-truck-medical"></i>
         <div>
-          <h2>Emergency<span style="color: var(--accent);">Services</span></h2>
+          <h2>Emergency<span style="color: #ffcc00;">Services</span></h2>
           <p>USA • 24/7 • Licensed & Insured</p>
         </div>
       </div>
@@ -46,6 +46,34 @@
         <i class="fas fa-bars"></i>
       </div>
     </div>
+    
+    <!-- Mobile Sidebar -->
+    <div class="mobile-sidebar" id="mobile-sidebar">
+      <div class="sidebar-header">
+        <i class="fas fa-truck-medical"></i>
+        <h2>Emergency<span>Services</span></h2>
+        <button class="close-sidebar" id="close-sidebar"><i class="fas fa-times"></i></button>
+      </div>
+      <ul class="sidebar-nav">
+        <li><a href="/"><i class="fas fa-home"></i> Home</a></li>
+        <li class="accordion">
+          <a href="#" class="accordion-toggle"><i class="fas fa-list"></i> Services <i class="fas fa-chevron-down"></i></a>
+          <ul class="accordion-menu">
+            <li style="padding-left: 20px;"><a href="/category/0.html"><i class="fas undefined"></i> undefined</a></li><li style="padding-left: 20px;"><a href="/category/1.html"><i class="fas undefined"></i> undefined</a></li><li style="padding-left: 20px;"><a href="/category/2.html"><i class="fas undefined"></i> undefined</a></li><li style="padding-left: 20px;"><a href="/category/3.html"><i class="fas undefined"></i> undefined</a></li><li style="padding-left: 20px;"><a href="/category/4.html"><i class="fas undefined"></i> undefined</a></li><li style="padding-left: 20px;"><a href="/category/5.html"><i class="fas undefined"></i> undefined</a></li><li style="padding-left: 20px;"><a href="/category/6.html"><i class="fas undefined"></i> undefined</a></li><li style="padding-left: 20px;"><a href="/category/7.html"><i class="fas undefined"></i> undefined</a></li><li style="padding-left: 20px;"><a href="/category/8.html"><i class="fas undefined"></i> undefined</a></li><li style="padding-left: 20px;"><a href="/category/9.html"><i class="fas undefined"></i> undefined</a></li>
+          </ul>
+        </li>
+        <li><a href="/blog/"><i class="fas fa-blog"></i> Resources</a></li>
+        <li><a href="/calculators/"><i class="fas fa-calculator"></i> Calculators</a></li>
+        <li><a href="/insurance/"><i class="fas fa-shield-alt"></i> Insurance</a></li>
+        <li><a href="/contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+      </ul>
+      <div class="sidebar-call">
+        <a href="tel:+1-888-555-1234" class="call-button">
+          <i class="fas fa-phone-alt"></i> Call Now
+        </a>
+      </div>
+    </div>
+    <div class="overlay" id="overlay"></div>
   </header>
   
   <main class="container">
@@ -54,7 +82,7 @@
     <div class="insurance-content">
       <section class="info-block">
         <h2><i class="fas fa-check-circle" style="color: green;"></i> What's Typically Covered?</h2>
-        <p>Most homeowner policies cover sudden water damage</p>
+        <p>Most homeowner policies cover sudden water damage from burst pipes or appliance overflow. We work with all major insurance companies.</p>
       </section>
       
       <section class="info-block">
@@ -86,16 +114,9 @@
         
           <div class="faq-item">
             <div class="faq-question" onclick="this.nextElementSibling.classList.toggle('show')">
-              <i class="fas fa-chevron-right"></i> How fast can you respond?
+              <i class="fas fa-chevron-right"></i> How much does water damage restoration cost?
             </div>
-            <div class="faq-answer">We respond within 30 minutes in most areas.</div>
-          </div>
-        
-          <div class="faq-item">
-            <div class="faq-question" onclick="this.nextElementSibling.classList.toggle('show')">
-              <i class="fas fa-chevron-right"></i> Do you work with insurance?
-            </div>
-            <div class="faq-answer">Yes, we work with all major insurance companies.</div>
+            <div class="faq-answer">Costs vary based on extent. Average $3-7 per sq ft. Free estimates provided.</div>
           </div>
         
       </section>
@@ -119,7 +140,7 @@
       <div class="footer-grid">
         <div class="footer-col">
           <h3><i class="fas fa-truck-medical"></i> Emergency Services USA</h3>
-          <p>Your trusted nationwide network of emergency service professionals.</p>
+          <p>Your trusted nationwide network of emergency service professionals. Available 24/7/365.</p>
           <p><i class="fas fa-phone"></i> +1-888-555-1234</p>
           <p><i class="fas fa-envelope"></i> help@emergencyservicesusa.com</p>
         </div>
@@ -137,6 +158,17 @@
             <li><a href="/blog/">Emergency Guides</a></li>
             <li><a href="/calculators/">Cost Calculators</a></li>
             <li><a href="/insurance/">Insurance Info</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Popular Cities</h3>
+          <ul>
+            <li><a href="/zip/90210.html">Beverly Hills, CA</a></li>
+            <li><a href="/zip/10001.html">New York, NY</a></li>
+            <li><a href="/zip/33186.html">Miami, FL</a></li>
+            <li><a href="/zip/60601.html">Chicago, IL</a></li>
+            <li><a href="/zip/77001.html">Houston, TX</a></li>
           </ul>
         </div>
         
