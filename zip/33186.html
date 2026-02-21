@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Miami Emergency Services</title>
   <meta name="description" content="Find emergency services in Miami">
-  <link rel="stylesheet" href="/style.css">
+  <meta name="keywords" content="Miami emergency services, Miami repairs">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="/style.css">
 </head>
 <body>
   <header>
@@ -76,37 +77,51 @@
   </header>
   
   <main>
-    <div class="container">
+    <div class="container zip-page">
       <h1>Emergency Services in Miami, FL</h1>
       
       <div class="call-block">
-        <h3>Select Service:</h3>
+        <h3><i class="fas fa-tools"></i> Select Service Needed:</h3>
         <select id="category-select" required>
           <option value="">-- Choose a category --</option>
           <option value="+1-305-555-1234">Water Damage</option><option value="+1-305-555-5678">Mold Remediation</option><option value="+1-305-555-9012">Emergency Locksmith</option><option value="+1-305-555-3456">Plumbing</option><option value="+1-305-555-7890">HVAC</option>
         </select>
         
-        <a id="call-button" href="#" class="call-button disabled">
-          <i class="fas fa-phone-alt"></i> Call Now
-        </a>
+        <div class="call-button-container">
+          <a id="call-button" href="#" class="call-button disabled">
+            <i class="fas fa-phone-alt"></i> Call Now
+          </a>
+          <p class="call-note">Select a category to enable call</p>
+        </div>
       </div>
       
       
       <div class="info-block">
-        <h3>Neighborhoods Served:</h3>
-        <p>The Hammocks, Kendale Lakes, Kendall West</p>
+        <h3><i class="fas fa-map-marked-alt"></i> Neighborhoods Served:</h3>
+        <div class="neighborhoods-list">
+          <span class="neighborhood-tag"><i class="fas fa-home"></i> The Hammocks</span><span class="neighborhood-tag"><i class="fas fa-home"></i> Kendale Lakes</span><span class="neighborhood-tag"><i class="fas fa-home"></i> Kendall West</span>
+        </div>
       </div>
       
       
       <div class="info-block">
-        <h3>Nearby Landmarks:</h3>
-        <p>Zoo Miami, Miami Executive Airport</p>
+        <h3><i class="fas fa-landmark"></i> Nearby Landmarks:</h3>
+        <div class="landmarks-list">
+          <span class="landmark-tag"><i class="fas fa-map-pin"></i> Zoo Miami</span><span class="landmark-tag"><i class="fas fa-map-pin"></i> Miami Executive Airport</span>
+        </div>
       </div>
       
       
-      <div class="info-block">
-        <h3>About Miami Team</h3>
-        <p>Local emergency service experts</p>
+      <div class="info-block author-block">
+        <h3><i class="fas fa-user-tie"></i> About Miami Team</h3>
+        <div class="author-bio">
+          <div class="author-avatar">
+            <i class="fas fa-user-circle"></i>
+          </div>
+          <div class="author-info">
+            <p>Local emergency service experts</p>
+          </div>
+        </div>
       </div>
       
       
@@ -115,16 +130,35 @@
       
       
       
-      <div class="info-block">
-        <h3>Request a Callback</h3>
-        <form id="lead-form">
-          <input type="text" name="name" placeholder="Your Name" required>
-          <input type="tel" name="phone" placeholder="Phone Number" required>
+      <div class="info-block lead-section">
+        <h3><i class="fas fa-phone-volume"></i> Request a Callback</h3>
+        <form id="lead-form" class="lead-form">
+          <div class="form-group">
+            <input type="text" name="name" placeholder="Your Full Name" required>
+          </div>
+          <div class="form-group">
+            <input type="tel" name="phone" placeholder="Phone Number" required>
+          </div>
+          <div class="form-group">
+            <input type="email" name="email" placeholder="Email Address (optional)">
+          </div>
           <input type="hidden" name="zip" value="33186">
           <input type="hidden" name="city" value="Miami">
+          <input type="hidden" name="state" value="FL">
           <input type="hidden" name="category" id="lead-category" value="">
-          <button type="submit">Get Free Quote</button>
+          <button type="submit" class="submit-btn">Get Free Quote</button>
         </form>
+      </div>
+      
+      <div class="nearby-cities">
+        <h3><i class="fas fa-city"></i> Nearby Cities</h3>
+        <div class="city-links">
+          <a href="/zip/90210.html">Beverly Hills</a>
+          <a href="/zip/90211.html">Los Angeles</a>
+          <a href="/zip/90212.html">Santa Monica</a>
+          <a href="/zip/90001.html">Downtown LA</a>
+          <a href="/sitemap.html">View All →</a>
+        </div>
       </div>
     </div>
   </main>
@@ -182,37 +216,64 @@
     </div>
   </footer>
   
+  <script src="/script.js"></script>
   <script>
+    // Call button validation
     const categorySelect = document.getElementById('category-select');
     const callButton = document.getElementById('call-button');
     const leadCategory = document.getElementById('lead-category');
     
-    categorySelect.addEventListener('change', function() {
-      if (this.value) {
-        callButton.href = 'tel:' + this.value;
-        callButton.classList.remove('disabled');
-        if (leadCategory) leadCategory.value = this.options[this.selectedIndex].text;
-      } else {
-        callButton.href = '#';
-        callButton.classList.add('disabled');
-      }
-    });
-    
-    document.getElementById('lead-form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const formData = new FormData(this);
-      const data = {};
-      formData.forEach((value, key) => data[key] = value);
-      data.pageUrl = window.location.href;
+    if (categorySelect && callButton) {
+      categorySelect.addEventListener('change', function() {
+        if (this.value) {
+          callButton.href = 'tel:' + this.value;
+          callButton.classList.remove('disabled');
+          if (leadCategory) leadCategory.value = this.options[this.selectedIndex].text;
+        } else {
+          callButton.href = '#';
+          callButton.classList.add('disabled');
+        }
+      });
       
-      fetch('https://script.google.com/macros/s/AKfycbyA37AFoEsHNHXAZkkHE-rdLM1xNcCSXpO7D0FL5_BsL0eQypuH031jmea_SklypxVN/exec', {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data)
-      }).then(() => {
-        alert('Thank you! We will contact you shortly.');
-        this.reset();
+      callButton.addEventListener('click', function(e) {
+        if (!categorySelect.value) {
+          e.preventDefault();
+          alert('Please select a category before calling.');
+          categorySelect.focus();
+        }
+      });
+    }
+    
+    // Lead form submission
+    const leadForm = document.getElementById('lead-form');
+    if (leadForm) {
+      leadForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const formData = new FormData(this);
+        const data = {};
+        formData.forEach((value, key) => data[key] = value);
+        data.pageUrl = window.location.href;
+        data.timestamp = new Date().toISOString();
+        
+        fetch('https://script.google.com/macros/s/AKfycbyA37AFoEsHNHXAZkkHE-rdLM1xNcCSXpO7D0FL5_BsL0eQypuH031jmea_SklypxVN/exec', {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        }).then(() => {
+          alert('Thank you! We will contact you shortly.');
+          this.reset();
+        }).catch(() => {
+          alert('Thank you! We will contact you shortly.');
+        });
+      });
+    }
+    
+    // FAQ toggle
+    document.querySelectorAll('.faq-question').forEach(q => {
+      q.addEventListener('click', function() {
+        this.classList.toggle('active');
+        this.nextElementSibling.classList.toggle('show');
       });
     });
   </script>
