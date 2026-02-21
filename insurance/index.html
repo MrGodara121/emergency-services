@@ -3,10 +3,92 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Insurance Coverage for Emergency Services | Emergency Services USA</title>
-  <meta name="description" content="Complete insurance guides for water damage, mold, plumbing, HVAC, roofing, and more. Learn what's covered and how to file claims.">
-  <link rel="stylesheet" href="/style.css">
+  <title>Insurance Coverage Guides | Emergency Services USA</title>
+  <meta name="description" content="Complete insurance guides for water damage, mold, locksmith, plumbing, HVAC, roofing, and more. Learn what's covered and how to file claims.">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    .insurance-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+    
+    .insurance-card {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      border: 1px solid #e9ecef;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .insurance-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 15px rgba(0,0,0,0.15);
+    }
+    
+    .insurance-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 5px;
+      background: linear-gradient(90deg, #003366, #dc3545);
+    }
+    
+    .insurance-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: #003366;
+    }
+    
+    .insurance-card h2 {
+      font-size: 1.5rem;
+      color: #003366;
+      margin-bottom: 1rem;
+    }
+    
+    .insurance-card p {
+      color: #666;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+    
+    .btn {
+      display: inline-block;
+      background: #003366;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+    
+    .btn:hover {
+      background: #dc3545;
+      transform: scale(1.05);
+    }
+    
+    .disclaimer-box {
+      background: #fff3cd;
+      border-left: 5px solid #ffc107;
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin: 2rem 0;
+    }
+    
+    @media (max-width: 768px) {
+      .insurance-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -25,7 +107,7 @@
           <li class="dropdown">
             <a href="#">Services <i class="fas fa-chevron-down"></i></a>
             <ul class="dropdown-menu">
-              <li><a href="/category/0.html"><i class="fas undefined"></i> undefined</a></li><li><a href="/category/1.html"><i class="fas undefined"></i> undefined</a></li><li><a href="/category/2.html"><i class="fas undefined"></i> undefined</a></li><li><a href="/category/3.html"><i class="fas undefined"></i> undefined</a></li><li><a href="/category/4.html"><i class="fas undefined"></i> undefined</a></li><li><a href="/category/5.html"><i class="fas undefined"></i> undefined</a></li><li><a href="/category/6.html"><i class="fas undefined"></i> undefined</a></li><li><a href="/category/7.html"><i class="fas undefined"></i> undefined</a></li><li><a href="/category/8.html"><i class="fas undefined"></i> undefined</a></li><li><a href="/category/9.html"><i class="fas undefined"></i> undefined</a></li>
+              <li><a href="/category/water-damage.html"><i class="fas fa-water"></i> Water Damage Restoration</a></li><li><a href="/category/mold-remediation.html"><i class="fas fa-leaf"></i> Mold Remediation</a></li><li><a href="/category/locksmith.html"><i class="fas fa-lock"></i> Emergency Locksmith</a></li><li><a href="/category/plumbing.html"><i class="fas fa-wrench"></i> Emergency Plumbing</a></li><li><a href="/category/hvac.html"><i class="fas fa-wind"></i> HVAC Services</a></li><li><a href="/category/roofing.html"><i class="fas fa-home"></i> Roofing Repair</a></li><li><a href="/category/pest-control.html"><i class="fas fa-bug"></i> Pest Control</a></li><li><a href="/category/solar.html"><i class="fas fa-sun"></i> Solar Services</a></li><li><a href="/category/junk-removal.html"><i class="fas fa-trash"></i> Junk Removal</a></li><li><a href="/category/tree-services.html"><i class="fas fa-tree"></i> Tree Services</a></li>
             </ul>
           </li>
           <li><a href="/blog/">Resources</a></li>
@@ -46,7 +128,6 @@
       </div>
     </div>
     
-    <!-- Mobile Sidebar -->
     <div class="mobile-sidebar" id="mobile-sidebar">
       <div class="sidebar-header">
         <i class="fas fa-truck-medical"></i>
@@ -58,7 +139,7 @@
         <li class="accordion">
           <a href="#" class="accordion-toggle"><i class="fas fa-list"></i> Services <i class="fas fa-chevron-down"></i></a>
           <ul class="accordion-menu">
-            <li style="padding-left: 20px;"><a href="/category/0.html"><i class="fas undefined"></i> undefined</a></li><li style="padding-left: 20px;"><a href="/category/1.html"><i class="fas undefined"></i> undefined</a></li><li style="padding-left: 20px;"><a href="/category/2.html"><i class="fas undefined"></i> undefined</a></li><li style="padding-left: 20px;"><a href="/category/3.html"><i class="fas undefined"></i> undefined</a></li><li style="padding-left: 20px;"><a href="/category/4.html"><i class="fas undefined"></i> undefined</a></li><li style="padding-left: 20px;"><a href="/category/5.html"><i class="fas undefined"></i> undefined</a></li><li style="padding-left: 20px;"><a href="/category/6.html"><i class="fas undefined"></i> undefined</a></li><li style="padding-left: 20px;"><a href="/category/7.html"><i class="fas undefined"></i> undefined</a></li><li style="padding-left: 20px;"><a href="/category/8.html"><i class="fas undefined"></i> undefined</a></li><li style="padding-left: 20px;"><a href="/category/9.html"><i class="fas undefined"></i> undefined</a></li>
+            <li style="padding-left: 20px;"><a href="/category/water-damage.html"><i class="fas fa-water"></i> Water Damage Restoration</a></li><li style="padding-left: 20px;"><a href="/category/mold-remediation.html"><i class="fas fa-leaf"></i> Mold Remediation</a></li><li style="padding-left: 20px;"><a href="/category/locksmith.html"><i class="fas fa-lock"></i> Emergency Locksmith</a></li><li style="padding-left: 20px;"><a href="/category/plumbing.html"><i class="fas fa-wrench"></i> Emergency Plumbing</a></li><li style="padding-left: 20px;"><a href="/category/hvac.html"><i class="fas fa-wind"></i> HVAC Services</a></li><li style="padding-left: 20px;"><a href="/category/roofing.html"><i class="fas fa-home"></i> Roofing Repair</a></li><li style="padding-left: 20px;"><a href="/category/pest-control.html"><i class="fas fa-bug"></i> Pest Control</a></li><li style="padding-left: 20px;"><a href="/category/solar.html"><i class="fas fa-sun"></i> Solar Services</a></li><li style="padding-left: 20px;"><a href="/category/junk-removal.html"><i class="fas fa-trash"></i> Junk Removal</a></li><li style="padding-left: 20px;"><a href="/category/tree-services.html"><i class="fas fa-tree"></i> Tree Services</a></li>
           </ul>
         </li>
         <li><a href="/blog/"><i class="fas fa-blog"></i> Resources</a></li>
@@ -76,67 +157,77 @@
   </header>
   
   <main class="container">
-    <h1>Insurance Coverage Guides</h1>
+    <h1><i class="fas fa-shield-alt"></i> Insurance Coverage Guides</h1>
     <p class="subhead">Understand your coverage – free claim assistance</p>
     
     <div class="insurance-grid">
       
         <div class="insurance-card">
-          <h2><a href="/insurance/water-damage.html">Water Damage Restoration Insurance</a></h2>
+          <div class="insurance-icon"><i class="fas fa-water"></i></div>
+          <h2>Water Damage Restoration Insurance</h2>
           <p>Learn what's covered and what's not</p>
           <a href="/insurance/water-damage.html" class="btn">Read Guide →</a>
         </div>
       
         <div class="insurance-card">
-          <h2><a href="/insurance/mold-remediation.html">Mold Remediation Insurance</a></h2>
+          <div class="insurance-icon"><i class="fas fa-leaf"></i></div>
+          <h2>Mold Remediation Insurance</h2>
           <p>Learn what's covered and what's not</p>
           <a href="/insurance/mold-remediation.html" class="btn">Read Guide →</a>
         </div>
       
         <div class="insurance-card">
-          <h2><a href="/insurance/locksmith.html">Emergency Locksmith Insurance</a></h2>
+          <div class="insurance-icon"><i class="fas fa-lock"></i></div>
+          <h2>Emergency Locksmith Insurance</h2>
           <p>Learn what's covered and what's not</p>
           <a href="/insurance/locksmith.html" class="btn">Read Guide →</a>
         </div>
       
         <div class="insurance-card">
-          <h2><a href="/insurance/plumbing.html">Emergency Plumbing Insurance</a></h2>
+          <div class="insurance-icon"><i class="fas fa-wrench"></i></div>
+          <h2>Emergency Plumbing Insurance</h2>
           <p>Learn what's covered and what's not</p>
           <a href="/insurance/plumbing.html" class="btn">Read Guide →</a>
         </div>
       
         <div class="insurance-card">
-          <h2><a href="/insurance/hvac.html">HVAC Services Insurance</a></h2>
+          <div class="insurance-icon"><i class="fas fa-wind"></i></div>
+          <h2>HVAC Services Insurance</h2>
           <p>Learn what's covered and what's not</p>
           <a href="/insurance/hvac.html" class="btn">Read Guide →</a>
         </div>
       
         <div class="insurance-card">
-          <h2><a href="/insurance/roofing.html">Roofing Repair Insurance</a></h2>
+          <div class="insurance-icon"><i class="fas fa-home"></i></div>
+          <h2>Roofing Repair Insurance</h2>
           <p>Learn what's covered and what's not</p>
           <a href="/insurance/roofing.html" class="btn">Read Guide →</a>
         </div>
       
         <div class="insurance-card">
-          <h2><a href="/insurance/pest-control.html">Pest Control Insurance</a></h2>
+          <div class="insurance-icon"><i class="fas fa-bug"></i></div>
+          <h2>Pest Control Insurance</h2>
           <p>Learn what's covered and what's not</p>
           <a href="/insurance/pest-control.html" class="btn">Read Guide →</a>
         </div>
       
         <div class="insurance-card">
-          <h2><a href="/insurance/solar.html">Solar Services Insurance</a></h2>
+          <div class="insurance-icon"><i class="fas fa-sun"></i></div>
+          <h2>Solar Services Insurance</h2>
           <p>Learn what's covered and what's not</p>
           <a href="/insurance/solar.html" class="btn">Read Guide →</a>
         </div>
       
         <div class="insurance-card">
-          <h2><a href="/insurance/junk-removal.html">Junk Removal Insurance</a></h2>
+          <div class="insurance-icon"><i class="fas fa-trash"></i></div>
+          <h2>Junk Removal Insurance</h2>
           <p>Learn what's covered and what's not</p>
           <a href="/insurance/junk-removal.html" class="btn">Read Guide →</a>
         </div>
       
         <div class="insurance-card">
-          <h2><a href="/insurance/tree-services.html">Tree Services Insurance</a></h2>
+          <div class="insurance-icon"><i class="fas fa-tree"></i></div>
+          <h2>Tree Services Insurance</h2>
           <p>Learn what's covered and what's not</p>
           <a href="/insurance/tree-services.html" class="btn">Read Guide →</a>
         </div>
@@ -144,7 +235,7 @@
     </div>
     
     <div class="disclaimer-box">
-      <p><i class="fas fa-balance-scale"></i> This information is for general guidance only. Always check your specific policy and consult with your insurance agent.</p>
+      <p><i class="fas fa-info-circle"></i> This information is for general guidance only. Always check your specific policy and consult with your insurance agent.</p>
     </div>
   </main>
   
@@ -161,7 +252,7 @@
         <div class="footer-col">
           <h3>Services</h3>
           <ul>
-            <li><a href="/category/0.html">undefined</a></li><li><a href="/category/1.html">undefined</a></li><li><a href="/category/2.html">undefined</a></li><li><a href="/category/3.html">undefined</a></li><li><a href="/category/4.html">undefined</a></li><li><a href="/category/5.html">undefined</a></li><li><a href="/category/6.html">undefined</a></li><li><a href="/category/7.html">undefined</a></li><li><a href="/category/8.html">undefined</a></li><li><a href="/category/9.html">undefined</a></li>
+            <li><a href="/category/water-damage.html">Water Damage Restoration</a></li><li><a href="/category/mold-remediation.html">Mold Remediation</a></li><li><a href="/category/locksmith.html">Emergency Locksmith</a></li><li><a href="/category/plumbing.html">Emergency Plumbing</a></li><li><a href="/category/hvac.html">HVAC Services</a></li><li><a href="/category/roofing.html">Roofing Repair</a></li><li><a href="/category/pest-control.html">Pest Control</a></li><li><a href="/category/solar.html">Solar Services</a></li><li><a href="/category/junk-removal.html">Junk Removal</a></li><li><a href="/category/tree-services.html">Tree Services</a></li>
           </ul>
         </div>
         
@@ -180,8 +271,8 @@
             <li><a href="/zip/90210.html">Beverly Hills, CA</a></li>
             <li><a href="/zip/10001.html">New York, NY</a></li>
             <li><a href="/zip/33186.html">Miami, FL</a></li>
-            <li><a href="/zip/60601.html">Chicago, IL</a></li>
-            <li><a href="/zip/77001.html">Houston, TX</a></li>
+            <li><a href="/zip/60629.html">Chicago, IL</a></li>
+            <li><a href="/zip/77494.html">Katy, TX</a></li>
           </ul>
         </div>
         
@@ -200,5 +291,7 @@
       </div>
     </div>
   </footer>
+  
+  <script src="/script.js"></script>
 </body>
 </html>

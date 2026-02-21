@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Emergency Services USA - 24/7 Emergency Services Across America</title>
-  <meta name="description" content="Find 24/7 emergency services in your area. Water damage, mold, locksmith, plumbing, HVAC, roofing, pest control, solar, junk removal, tree services. Call now!">
+  <title>Emergency Services USA</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -25,7 +24,7 @@
           <li class="dropdown">
             <a href="#">Services <i class="fas fa-chevron-down"></i></a>
             <ul class="dropdown-menu">
-              <li><a href="/category/0.html"><i class="fas undefined"></i> undefined</a></li><li><a href="/category/1.html"><i class="fas undefined"></i> undefined</a></li><li><a href="/category/2.html"><i class="fas undefined"></i> undefined</a></li><li><a href="/category/3.html"><i class="fas undefined"></i> undefined</a></li><li><a href="/category/4.html"><i class="fas undefined"></i> undefined</a></li><li><a href="/category/5.html"><i class="fas undefined"></i> undefined</a></li><li><a href="/category/6.html"><i class="fas undefined"></i> undefined</a></li><li><a href="/category/7.html"><i class="fas undefined"></i> undefined</a></li><li><a href="/category/8.html"><i class="fas undefined"></i> undefined</a></li><li><a href="/category/9.html"><i class="fas undefined"></i> undefined</a></li>
+              <li><a href="/category/water-damage.html"><i class="fas fa-water"></i> Water Damage Restoration</a></li><li><a href="/category/mold-remediation.html"><i class="fas fa-leaf"></i> Mold Remediation</a></li><li><a href="/category/locksmith.html"><i class="fas fa-lock"></i> Emergency Locksmith</a></li><li><a href="/category/plumbing.html"><i class="fas fa-wrench"></i> Emergency Plumbing</a></li><li><a href="/category/hvac.html"><i class="fas fa-wind"></i> HVAC Services</a></li><li><a href="/category/roofing.html"><i class="fas fa-home"></i> Roofing Repair</a></li><li><a href="/category/pest-control.html"><i class="fas fa-bug"></i> Pest Control</a></li><li><a href="/category/solar.html"><i class="fas fa-sun"></i> Solar Services</a></li><li><a href="/category/junk-removal.html"><i class="fas fa-trash"></i> Junk Removal</a></li><li><a href="/category/tree-services.html"><i class="fas fa-tree"></i> Tree Services</a></li>
             </ul>
           </li>
           <li><a href="/blog/">Resources</a></li>
@@ -46,7 +45,6 @@
       </div>
     </div>
     
-    <!-- Mobile Sidebar -->
     <div class="mobile-sidebar" id="mobile-sidebar">
       <div class="sidebar-header">
         <i class="fas fa-truck-medical"></i>
@@ -58,7 +56,7 @@
         <li class="accordion">
           <a href="#" class="accordion-toggle"><i class="fas fa-list"></i> Services <i class="fas fa-chevron-down"></i></a>
           <ul class="accordion-menu">
-            <li style="padding-left: 20px;"><a href="/category/0.html"><i class="fas undefined"></i> undefined</a></li><li style="padding-left: 20px;"><a href="/category/1.html"><i class="fas undefined"></i> undefined</a></li><li style="padding-left: 20px;"><a href="/category/2.html"><i class="fas undefined"></i> undefined</a></li><li style="padding-left: 20px;"><a href="/category/3.html"><i class="fas undefined"></i> undefined</a></li><li style="padding-left: 20px;"><a href="/category/4.html"><i class="fas undefined"></i> undefined</a></li><li style="padding-left: 20px;"><a href="/category/5.html"><i class="fas undefined"></i> undefined</a></li><li style="padding-left: 20px;"><a href="/category/6.html"><i class="fas undefined"></i> undefined</a></li><li style="padding-left: 20px;"><a href="/category/7.html"><i class="fas undefined"></i> undefined</a></li><li style="padding-left: 20px;"><a href="/category/8.html"><i class="fas undefined"></i> undefined</a></li><li style="padding-left: 20px;"><a href="/category/9.html"><i class="fas undefined"></i> undefined</a></li>
+            <li style="padding-left: 20px;"><a href="/category/water-damage.html"><i class="fas fa-water"></i> Water Damage Restoration</a></li><li style="padding-left: 20px;"><a href="/category/mold-remediation.html"><i class="fas fa-leaf"></i> Mold Remediation</a></li><li style="padding-left: 20px;"><a href="/category/locksmith.html"><i class="fas fa-lock"></i> Emergency Locksmith</a></li><li style="padding-left: 20px;"><a href="/category/plumbing.html"><i class="fas fa-wrench"></i> Emergency Plumbing</a></li><li style="padding-left: 20px;"><a href="/category/hvac.html"><i class="fas fa-wind"></i> HVAC Services</a></li><li style="padding-left: 20px;"><a href="/category/roofing.html"><i class="fas fa-home"></i> Roofing Repair</a></li><li style="padding-left: 20px;"><a href="/category/pest-control.html"><i class="fas fa-bug"></i> Pest Control</a></li><li style="padding-left: 20px;"><a href="/category/solar.html"><i class="fas fa-sun"></i> Solar Services</a></li><li style="padding-left: 20px;"><a href="/category/junk-removal.html"><i class="fas fa-trash"></i> Junk Removal</a></li><li style="padding-left: 20px;"><a href="/category/tree-services.html"><i class="fas fa-tree"></i> Tree Services</a></li>
           </ul>
         </li>
         <li><a href="/blog/"><i class="fas fa-blog"></i> Resources</a></li>
@@ -77,120 +75,88 @@
   
   <main>
     <section class="hero">
-      <div class="container">
-        <h1>America's Most Trusted<br>Emergency Services Network</h1>
-        <p class="subhead">24/7 response • Licensed professionals • Free estimates</p>
-        
-        <div class="search-box">
-          <h3>Find Emergency Services Near You</h3>
-          <form action="/search" method="get" class="zip-search">
-            <input type="text" name="zip" placeholder="Enter ZIP code" pattern="[0-9]{5}" maxlength="5" required>
-            <button type="submit"><i class="fas fa-search"></i> Find Help</button>
-          </form>
-          <p class="example">Example: <a href="/zip/90210.html">90210 Beverly Hills</a></p>
-        </div>
-        
-        <div class="trust-badges">
-          <span class="badge"><i class="fas fa-check-circle"></i> BBB Accredited Business</span><span class="badge"><i class="fas fa-check-circle"></i> 24/7 Emergency Service</span><span class="badge"><i class="fas fa-check-circle"></i> Licensed & Insured</span><span class="badge"><i class="fas fa-check-circle"></i> Free Estimates</span><span class="badge"><i class="fas fa-check-circle"></i> 100% Satisfaction Guarantee</span><span class="badge"><i class="fas fa-check-circle"></i> Family Owned & Operated</span><span class="badge"><i class="fas fa-check-circle"></i> EPA Certified</span><span class="badge"><i class="fas fa-check-circle"></i> OSHA Compliant</span><span class="badge"><i class="fas fa-check-circle"></i> 5-Star Rated</span><span class="badge"><i class="fas fa-check-circle"></i> Same-Day Service</span>
-        </div>
-      </div>
+      <h1>Emergency Services USA</h1>
+      <p>24/7 response • Licensed professionals • Free estimates</p>
+      <form action="/search" method="get">
+        <input type="text" name="zip" placeholder="Enter ZIP code">
+        <button type="submit">Find Help</button>
+      </form>
     </section>
     
-    <section class="categories-section">
-      <div class="container">
-        <h2>Our Emergency Services</h2>
-        <div class="category-grid">
-          
+    <section>
+      <h2>Our Services</h2>
+      <div class="category-grid">
+        
       <div class="category-card">
-        <div class="category-icon"><i class="fas undefined"></i></div>
-        <h3>undefined</h3>
+        <div class="category-icon"><i class="fas fa-water"></i></div>
+        <h3>Water Damage Restoration</h3>
         <p>24/7 emergency service</p>
-        <p class="urgency">Fast response</p>
-        <a href="/category/0.html" class="btn">Learn More →</a>
+        <a href="/category/water-damage.html" class="btn">Learn More →</a>
       </div>
     
       <div class="category-card">
-        <div class="category-icon"><i class="fas undefined"></i></div>
-        <h3>undefined</h3>
+        <div class="category-icon"><i class="fas fa-leaf"></i></div>
+        <h3>Mold Remediation</h3>
         <p>24/7 emergency service</p>
-        <p class="urgency">Fast response</p>
-        <a href="/category/1.html" class="btn">Learn More →</a>
+        <a href="/category/mold-remediation.html" class="btn">Learn More →</a>
       </div>
     
       <div class="category-card">
-        <div class="category-icon"><i class="fas undefined"></i></div>
-        <h3>undefined</h3>
+        <div class="category-icon"><i class="fas fa-lock"></i></div>
+        <h3>Emergency Locksmith</h3>
         <p>24/7 emergency service</p>
-        <p class="urgency">Fast response</p>
-        <a href="/category/2.html" class="btn">Learn More →</a>
+        <a href="/category/locksmith.html" class="btn">Learn More →</a>
       </div>
     
       <div class="category-card">
-        <div class="category-icon"><i class="fas undefined"></i></div>
-        <h3>undefined</h3>
+        <div class="category-icon"><i class="fas fa-wrench"></i></div>
+        <h3>Emergency Plumbing</h3>
         <p>24/7 emergency service</p>
-        <p class="urgency">Fast response</p>
-        <a href="/category/3.html" class="btn">Learn More →</a>
+        <a href="/category/plumbing.html" class="btn">Learn More →</a>
       </div>
     
       <div class="category-card">
-        <div class="category-icon"><i class="fas undefined"></i></div>
-        <h3>undefined</h3>
+        <div class="category-icon"><i class="fas fa-wind"></i></div>
+        <h3>HVAC Services</h3>
         <p>24/7 emergency service</p>
-        <p class="urgency">Fast response</p>
-        <a href="/category/4.html" class="btn">Learn More →</a>
+        <a href="/category/hvac.html" class="btn">Learn More →</a>
       </div>
     
       <div class="category-card">
-        <div class="category-icon"><i class="fas undefined"></i></div>
-        <h3>undefined</h3>
+        <div class="category-icon"><i class="fas fa-home"></i></div>
+        <h3>Roofing Repair</h3>
         <p>24/7 emergency service</p>
-        <p class="urgency">Fast response</p>
-        <a href="/category/5.html" class="btn">Learn More →</a>
+        <a href="/category/roofing.html" class="btn">Learn More →</a>
       </div>
     
       <div class="category-card">
-        <div class="category-icon"><i class="fas undefined"></i></div>
-        <h3>undefined</h3>
+        <div class="category-icon"><i class="fas fa-bug"></i></div>
+        <h3>Pest Control</h3>
         <p>24/7 emergency service</p>
-        <p class="urgency">Fast response</p>
-        <a href="/category/6.html" class="btn">Learn More →</a>
+        <a href="/category/pest-control.html" class="btn">Learn More →</a>
       </div>
     
       <div class="category-card">
-        <div class="category-icon"><i class="fas undefined"></i></div>
-        <h3>undefined</h3>
+        <div class="category-icon"><i class="fas fa-sun"></i></div>
+        <h3>Solar Services</h3>
         <p>24/7 emergency service</p>
-        <p class="urgency">Fast response</p>
-        <a href="/category/7.html" class="btn">Learn More →</a>
+        <a href="/category/solar.html" class="btn">Learn More →</a>
       </div>
     
       <div class="category-card">
-        <div class="category-icon"><i class="fas undefined"></i></div>
-        <h3>undefined</h3>
+        <div class="category-icon"><i class="fas fa-trash"></i></div>
+        <h3>Junk Removal</h3>
         <p>24/7 emergency service</p>
-        <p class="urgency">Fast response</p>
-        <a href="/category/8.html" class="btn">Learn More →</a>
+        <a href="/category/junk-removal.html" class="btn">Learn More →</a>
       </div>
     
       <div class="category-card">
-        <div class="category-icon"><i class="fas undefined"></i></div>
-        <h3>undefined</h3>
+        <div class="category-icon"><i class="fas fa-tree"></i></div>
+        <h3>Tree Services</h3>
         <p>24/7 emergency service</p>
-        <p class="urgency">Fast response</p>
-        <a href="/category/9.html" class="btn">Learn More →</a>
+        <a href="/category/tree-services.html" class="btn">Learn More →</a>
       </div>
     
-        </div>
-      </div>
-    </section>
-    
-    <section class="cta">
-      <div class="container">
-        <h2>Need Emergency Help Right Now?</h2>
-        <a href="tel:+1-888-555-1234" class="cta-button">
-          <i class="fas fa-phone-alt"></i> Call +1-888-555-1234
-        </a>
       </div>
     </section>
   </main>
@@ -208,7 +174,7 @@
         <div class="footer-col">
           <h3>Services</h3>
           <ul>
-            <li><a href="/category/0.html">undefined</a></li><li><a href="/category/1.html">undefined</a></li><li><a href="/category/2.html">undefined</a></li><li><a href="/category/3.html">undefined</a></li><li><a href="/category/4.html">undefined</a></li><li><a href="/category/5.html">undefined</a></li><li><a href="/category/6.html">undefined</a></li><li><a href="/category/7.html">undefined</a></li><li><a href="/category/8.html">undefined</a></li><li><a href="/category/9.html">undefined</a></li>
+            <li><a href="/category/water-damage.html">Water Damage Restoration</a></li><li><a href="/category/mold-remediation.html">Mold Remediation</a></li><li><a href="/category/locksmith.html">Emergency Locksmith</a></li><li><a href="/category/plumbing.html">Emergency Plumbing</a></li><li><a href="/category/hvac.html">HVAC Services</a></li><li><a href="/category/roofing.html">Roofing Repair</a></li><li><a href="/category/pest-control.html">Pest Control</a></li><li><a href="/category/solar.html">Solar Services</a></li><li><a href="/category/junk-removal.html">Junk Removal</a></li><li><a href="/category/tree-services.html">Tree Services</a></li>
           </ul>
         </div>
         
@@ -227,8 +193,8 @@
             <li><a href="/zip/90210.html">Beverly Hills, CA</a></li>
             <li><a href="/zip/10001.html">New York, NY</a></li>
             <li><a href="/zip/33186.html">Miami, FL</a></li>
-            <li><a href="/zip/60601.html">Chicago, IL</a></li>
-            <li><a href="/zip/77001.html">Houston, TX</a></li>
+            <li><a href="/zip/60629.html">Chicago, IL</a></li>
+            <li><a href="/zip/77494.html">Katy, TX</a></li>
           </ul>
         </div>
         
@@ -247,7 +213,6 @@
       </div>
     </div>
   </footer>
-  
   <script src="script.js"></script>
 </body>
 </html>
